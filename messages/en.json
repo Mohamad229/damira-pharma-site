@@ -1,0 +1,56 @@
+{
+  "common": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "products": "Products",
+    "compliance": "Quality & Compliance",
+    "partnerships": "Partnerships",
+    "contact": "Contact Us",
+    "readMore": "Read More",
+    "learnMore": "Learn More",
+    "viewAll": "View All",
+    "search": "Search",
+    "filter": "Filter",
+    "submit": "Submit",
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "notFound": "Page not found"
+  },
+  "home": {
+    "title": "Welcome to Damira Pharma",
+    "subtitle": "Leading Healthcare Solutions in the Middle East",
+    "heroDescription": "Trusted pharmaceutical distribution and healthcare solutions"
+  },
+  "about": {
+    "title": "About Us",
+    "vision": "Our Vision",
+    "mission": "Our Mission",
+    "values": "Our Values"
+  },
+  "products": {
+    "title": "Our Products",
+    "catalog": "Product Catalog",
+    "available": "Available",
+    "pipeline": "Pipeline",
+    "therapeuticArea": "Therapeutic Area",
+    "category": "Category",
+    "noProducts": "No products found"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "name": "Full Name",
+    "email": "Email Address",
+    "phone": "Phone Number",
+    "company": "Company",
+    "message": "Message",
+    "send": "Send Message",
+    "success": "Thank you! We'll get back to you soon.",
+    "error": "Failed to send message. Please try again."
+  },
+  "footer": {
+    "rights": "All rights reserved",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  }
+}

@@ -1,0 +1,814 @@
+
+> damira-pharma-site@0.1.0 dev
+> next dev
+
+⚠ Port 3000 is in use by process 24656, using available port 3002 instead.
+▲ Next.js 16.2.2 (Turbopack)
+- Local:         http://localhost:3002
+- Network:       http://10.2.0.2:3002
+- Environments: .env
+✓ Ready in 627ms
+⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+
+Error: "./dist/tw-animate.css" is not exported under the condition "style" from package C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\tw-animate-css (see exports field in C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\tw-animate-css\package.json)
+    [2m[at C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\enhanced-resolve\lib\ExportsFieldPlugin.js:123:7][0m
+    [2m[at Hook.eval [as callAsync] (eval at create (C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:22:1)][0m
+    [2m[at Resolver.doResolve (C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\enhanced-resolve\lib\Resolver.js:737:16)][0m
+    [2m[at C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\enhanced-resolve\lib\DescriptionFilePlugin.js:80:17][0m
+    [2m[at C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\enhanced-resolve\lib\DescriptionFileUtils.js:161:24][0m
+    [2m[at C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\enhanced-resolve\lib\forEachBail.js:39:13][0m
+    [2m[at onJson (C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\enhanced-resolve\lib\DescriptionFileUtils.js:96:6)][0m
+    [2m[at C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\enhanced-resolve\lib\DescriptionFileUtils.js:123:7][0m
+    [2m[at SyncAsyncFileSystemDecorator.readJson (C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\enhanced-resolve\lib\SyncAsyncFileSystemDecorator.js:204:6)][0m
+    [2m[at C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\enhanced-resolve\lib\DescriptionFileUtils.js:104:26][0m
+○ Compiling /[locale] ...
+⨯ ./app/globals.css
+Error evaluating Node.js code
+CssSyntaxError: tailwindcss: C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\app\globals.css:1:1: "./dist/tw-animate.css" is not exported under the condition "style" from package C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\tw-animate-css (see exports field in C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\tw-animate-css\package.json)
+    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
+    [at Root.error (turbopack:///[project]/node_modules/postcss/lib/node.js:146:32)]
+    [at Object.Once (C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\@tailwindcss\postcss\dist\index.js:10:6913)]
+    [at process.processTicksAndRejections (node:internal/process/task_queues:103:5)]
+    [at async LazyResult.runAsync (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:293:11)]
+    [at async transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:34)]
+    [at async run (turbopack:///[turbopack-node]/child_process/evaluate.ts:89:23)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+
+
+ GET / 500 in 4.5s (next.js: 4.1s, proxy.ts: 156ms, application-code: 181ms)
+[browser] Uncaught Error: ./app/globals.css
+Error evaluating Node.js code
+CssSyntaxError: tailwindcss: C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\app\globals.css:1:1: "./dist/tw-animate.css" is not exported under the condition "style" from package C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\tw-animate-css (see exports field in C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\tw-animate-css\package.json)
+    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
+    [at Root.error (turbopack:///[project]/node_modules/postcss/lib/node.js:146:32)]
+    [at Object.Once (C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\@tailwindcss\postcss\dist\index.js:10:6913)]
+    [at process.processTicksAndRejections (node:internal/process/task_queues:103:5)]
+    [at async LazyResult.runAsync (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:293:11)]
+    [at async transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:34)]
+    [at async run (turbopack:///[turbopack-node]/child_process/evaluate.ts:89:23)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+
+
+[browser] ./app/globals.css
+Error evaluating Node.js code
+CssSyntaxError: tailwindcss: C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\app\globals.css:1:1: "./dist/tw-animate.css" is not exported under the condition "style" from package C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\tw-animate-css (see exports field in C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\tw-animate-css\package.json)
+    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
+    [at Root.error (turbopack:///[project]/node_modules/postcss/lib/node.js:146:32)]
+    [at Object.Once (C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\@tailwindcss\postcss\dist\index.js:10:6913)]
+    [at process.processTicksAndRejections (node:internal/process/task_queues:103:5)]
+    [at async LazyResult.runAsync (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:293:11)]
+    [at async transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:34)]
+    [at async run (turbopack:///[turbopack-node]/child_process/evaluate.ts:89:23)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] 
+    at handleErrors (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+    at processMessage (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2834:28)
+    at <unknown> (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2679:13)
+    at WebSocket.handleMessage (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2324:17) (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+[browser] ./app/globals.css
+Error evaluating Node.js code
+CssSyntaxError: tailwindcss: C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\app\globals.css:1:1: "./dist/tw-animate.css" is not exported under the condition "style" from package C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\tw-animate-css (see exports field in C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\tw-animate-css\package.json)
+    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
+    [at Root.error (turbopack:///[project]/node_modules/postcss/lib/node.js:146:32)]
+    [at Object.Once (C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\@tailwindcss\postcss\dist\index.js:10:6913)]
+    [at process.processTicksAndRejections (node:internal/process/task_queues:103:5)]
+    [at async LazyResult.runAsync (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:293:11)]
+    [at async transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:34)]
+    [at async run (turbopack:///[turbopack-node]/child_process/evaluate.ts:89:23)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] 
+    at handleErrors (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+    at processMessage (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2834:28)
+    at <unknown> (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2679:13)
+    at WebSocket.handleMessage (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2324:17) (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+[browser] ./app/globals.css
+Error evaluating Node.js code
+CssSyntaxError: tailwindcss: C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\app\globals.css:1:1: "./dist/tw-animate.css" is not exported under the condition "style" from package C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\tw-animate-css (see exports field in C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\tw-animate-css\package.json)
+    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
+    [at Root.error (turbopack:///[project]/node_modules/postcss/lib/node.js:146:32)]
+    [at Object.Once (C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\@tailwindcss\postcss\dist\index.js:10:6913)]
+    [at process.processTicksAndRejections (node:internal/process/task_queues:103:5)]
+    [at async LazyResult.runAsync (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:293:11)]
+    [at async transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:34)]
+    [at async run (turbopack:///[turbopack-node]/child_process/evaluate.ts:89:23)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] 
+    at handleErrors (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+    at processMessage (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2834:28)
+    at <unknown> (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2679:13)
+    at WebSocket.handleMessage (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2324:17) (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+⨯ ./app/globals.css
+Error evaluating Node.js code
+CssSyntaxError: tailwindcss: C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\app\globals.css:1:1: "./dist/tw-animate.css" is not exported under the condition "style" from package C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\tw-animate-css (see exports field in C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\tw-animate-css\package.json)
+    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
+    [at Root.error (turbopack:///[project]/node_modules/postcss/lib/node.js:146:32)]
+    [at Object.Once (C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\@tailwindcss\postcss\dist\index.js:10:6913)]
+    [at process.processTicksAndRejections (node:internal/process/task_queues:103:5)]
+    [at async LazyResult.runAsync (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:293:11)]
+    [at async transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:34)]
+    [at async run (turbopack:///[turbopack-node]/child_process/evaluate.ts:89:23)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+
+
+ GET /admin 500 in 959ms (next.js: 940ms, proxy.ts: 5ms, application-code: 14ms)
+[browser] Uncaught Error: ./app/globals.css
+Error evaluating Node.js code
+CssSyntaxError: tailwindcss: C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\app\globals.css:1:1: "./dist/tw-animate.css" is not exported under the condition "style" from package C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\tw-animate-css (see exports field in C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\tw-animate-css\package.json)
+    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
+    [at Root.error (turbopack:///[project]/node_modules/postcss/lib/node.js:146:32)]
+    [at Object.Once (C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\@tailwindcss\postcss\dist\index.js:10:6913)]
+    [at process.processTicksAndRejections (node:internal/process/task_queues:103:5)]
+    [at async LazyResult.runAsync (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:293:11)]
+    [at async transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:34)]
+    [at async run (turbopack:///[turbopack-node]/child_process/evaluate.ts:89:23)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+
+
+[browser] ./app/globals.css
+Error evaluating Node.js code
+CssSyntaxError: tailwindcss: C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\app\globals.css:1:1: "./dist/tw-animate.css" is not exported under the condition "style" from package C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\tw-animate-css (see exports field in C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\tw-animate-css\package.json)
+    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
+    [at Root.error (turbopack:///[project]/node_modules/postcss/lib/node.js:146:32)]
+    [at Object.Once (C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\@tailwindcss\postcss\dist\index.js:10:6913)]
+    [at process.processTicksAndRejections (node:internal/process/task_queues:103:5)]
+    [at async LazyResult.runAsync (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:293:11)]
+    [at async transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:34)]
+    [at async run (turbopack:///[turbopack-node]/child_process/evaluate.ts:89:23)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] 
+    at handleErrors (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+    at processMessage (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2834:28)
+    at <unknown> (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2679:13)
+    at WebSocket.handleMessage (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2324:17) (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+[browser] ./app/globals.css
+Error evaluating Node.js code
+CssSyntaxError: tailwindcss: C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\app\globals.css:1:1: "./dist/tw-animate.css" is not exported under the condition "style" from package C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\tw-animate-css (see exports field in C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\tw-animate-css\package.json)
+    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
+    [at Root.error (turbopack:///[project]/node_modules/postcss/lib/node.js:146:32)]
+    [at Object.Once (C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\@tailwindcss\postcss\dist\index.js:10:6913)]
+    [at process.processTicksAndRejections (node:internal/process/task_queues:103:5)]
+    [at async LazyResult.runAsync (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:293:11)]
+    [at async transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:34)]
+    [at async run (turbopack:///[turbopack-node]/child_process/evaluate.ts:89:23)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] 
+    at handleErrors (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+    at processMessage (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2834:28)
+    at <unknown> (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2679:13)
+    at WebSocket.handleMessage (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2324:17) (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+[browser] ./app/globals.css
+Error evaluating Node.js code
+CssSyntaxError: tailwindcss: C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\app\globals.css:1:1: "./dist/tw-animate.css" is not exported under the condition "style" from package C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\tw-animate-css (see exports field in C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\tw-animate-css\package.json)
+    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
+    [at Root.error (turbopack:///[project]/node_modules/postcss/lib/node.js:146:32)]
+    [at Object.Once (C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\@tailwindcss\postcss\dist\index.js:10:6913)]
+    [at process.processTicksAndRejections (node:internal/process/task_queues:103:5)]
+    [at async LazyResult.runAsync (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:293:11)]
+    [at async transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:34)]
+    [at async run (turbopack:///[turbopack-node]/child_process/evaluate.ts:89:23)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] 
+    at handleErrors (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+    at processMessage (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2834:28)
+    at <unknown> (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2679:13)
+    at WebSocket.handleMessage (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2324:17) (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+✓ Finished filesystem cache database compaction in 14.9s
+⨯ ./app/globals.css
+Error evaluating Node.js code
+CssSyntaxError: tailwindcss: C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\app\globals.css:1:1: "./dist/tw-animate.css" is not exported under the condition "style" from package C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\tw-animate-css (see exports field in C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\tw-animate-css\package.json)
+    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
+    [at Root.error (turbopack:///[project]/node_modules/postcss/lib/node.js:146:32)]
+    [at Object.Once (C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\@tailwindcss\postcss\dist\index.js:10:6913)]
+    [at process.processTicksAndRejections (node:internal/process/task_queues:103:5)]
+    [at async LazyResult.runAsync (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:293:11)]
+    [at async transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:34)]
+    [at async run (turbopack:///[turbopack-node]/child_process/evaluate.ts:89:23)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+
+
+ GET /admin/login 500 in 746ms (next.js: 728ms, proxy.ts: 4ms, application-code: 13ms)
+[browser] Uncaught Error: ./app/globals.css
+Error evaluating Node.js code
+CssSyntaxError: tailwindcss: C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\app\globals.css:1:1: "./dist/tw-animate.css" is not exported under the condition "style" from package C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\tw-animate-css (see exports field in C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\tw-animate-css\package.json)
+    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
+    [at Root.error (turbopack:///[project]/node_modules/postcss/lib/node.js:146:32)]
+    [at Object.Once (C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\@tailwindcss\postcss\dist\index.js:10:6913)]
+    [at process.processTicksAndRejections (node:internal/process/task_queues:103:5)]
+    [at async LazyResult.runAsync (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:293:11)]
+    [at async transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:34)]
+    [at async run (turbopack:///[turbopack-node]/child_process/evaluate.ts:89:23)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+
+
+[browser] ./app/globals.css
+Error evaluating Node.js code
+CssSyntaxError: tailwindcss: C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\app\globals.css:1:1: "./dist/tw-animate.css" is not exported under the condition "style" from package C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\tw-animate-css (see exports field in C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\tw-animate-css\package.json)
+    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
+    [at Root.error (turbopack:///[project]/node_modules/postcss/lib/node.js:146:32)]
+    [at Object.Once (C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\@tailwindcss\postcss\dist\index.js:10:6913)]
+    [at process.processTicksAndRejections (node:internal/process/task_queues:103:5)]
+    [at async LazyResult.runAsync (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:293:11)]
+    [at async transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:34)]
+    [at async run (turbopack:///[turbopack-node]/child_process/evaluate.ts:89:23)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] 
+    at handleErrors (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+    at processMessage (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2834:28)
+    at <unknown> (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2679:13)
+    at WebSocket.handleMessage (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2324:17) (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+[browser] ./app/globals.css
+Error evaluating Node.js code
+CssSyntaxError: tailwindcss: C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\app\globals.css:1:1: "./dist/tw-animate.css" is not exported under the condition "style" from package C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\tw-animate-css (see exports field in C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\tw-animate-css\package.json)
+    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
+    [at Root.error (turbopack:///[project]/node_modules/postcss/lib/node.js:146:32)]
+    [at Object.Once (C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\@tailwindcss\postcss\dist\index.js:10:6913)]
+    [at process.processTicksAndRejections (node:internal/process/task_queues:103:5)]
+    [at async LazyResult.runAsync (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:293:11)]
+    [at async transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:34)]
+    [at async run (turbopack:///[turbopack-node]/child_process/evaluate.ts:89:23)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] 
+    at handleErrors (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+    at processMessage (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2834:28)
+    at <unknown> (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2679:13)
+    at WebSocket.handleMessage (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2324:17) (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+[browser] ./app/globals.css
+Error evaluating Node.js code
+CssSyntaxError: tailwindcss: C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\app\globals.css:1:1: "./dist/tw-animate.css" is not exported under the condition "style" from package C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\tw-animate-css (see exports field in C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\tw-animate-css\package.json)
+    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
+    [at Root.error (turbopack:///[project]/node_modules/postcss/lib/node.js:146:32)]
+    [at Object.Once (C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\@tailwindcss\postcss\dist\index.js:10:6913)]
+    [at process.processTicksAndRejections (node:internal/process/task_queues:103:5)]
+    [at async LazyResult.runAsync (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:293:11)]
+    [at async transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:34)]
+    [at async run (turbopack:///[turbopack-node]/child_process/evaluate.ts:89:23)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] 
+    at handleErrors (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+    at processMessage (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2834:28)
+    at <unknown> (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2679:13)
+    at WebSocket.handleMessage (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2324:17) (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+[browser] ./app/globals.css
+Error evaluating Node.js code
+CssSyntaxError: tailwindcss: C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\app\globals.css:1:1: "./dist/tw-animate.css" is not exported under the condition "style" from package C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\tw-animate-css (see exports field in C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\tw-animate-css\package.json)
+    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
+    [at Root.error (turbopack:///[project]/node_modules/postcss/lib/node.js:146:32)]
+    [at Object.Once (C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\@tailwindcss\postcss\dist\index.js:10:6913)]
+    [at process.processTicksAndRejections (node:internal/process/task_queues:103:5)]
+    [at async LazyResult.runAsync (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:293:11)]
+    [at async transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:34)]
+    [at async run (turbopack:///[turbopack-node]/child_process/evaluate.ts:89:23)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] 
+    at handleErrors (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+    at processMessage (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2834:28)
+    at <unknown> (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2679:13)
+    at WebSocket.handleMessage (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2324:17) (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+[browser] ./app/globals.css
+Error evaluating Node.js code
+CssSyntaxError: tailwindcss: C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\app\globals.css:1:1: "./dist/tw-animate.css" is not exported under the condition "style" from package C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\tw-animate-css (see exports field in C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\tw-animate-css\package.json)
+    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
+    [at Root.error (turbopack:///[project]/node_modules/postcss/lib/node.js:146:32)]
+    [at Object.Once (C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\@tailwindcss\postcss\dist\index.js:10:6913)]
+    [at process.processTicksAndRejections (node:internal/process/task_queues:103:5)]
+    [at async LazyResult.runAsync (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:293:11)]
+    [at async transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:34)]
+    [at async run (turbopack:///[turbopack-node]/child_process/evaluate.ts:89:23)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] 
+    at handleErrors (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+    at processMessage (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2834:28)
+    at <unknown> (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2679:13)
+    at WebSocket.handleMessage (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2324:17) (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+[browser] ./app/globals.css
+Error evaluating Node.js code
+CssSyntaxError: tailwindcss: C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\app\globals.css:1:1: "./dist/tw-animate.css" is not exported under the condition "style" from package C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\tw-animate-css (see exports field in C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\tw-animate-css\package.json)
+    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
+    [at Root.error (turbopack:///[project]/node_modules/postcss/lib/node.js:146:32)]
+    [at Object.Once (C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\@tailwindcss\postcss\dist\index.js:10:6913)]
+    [at process.processTicksAndRejections (node:internal/process/task_queues:103:5)]
+    [at async LazyResult.runAsync (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:293:11)]
+    [at async transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:34)]
+    [at async run (turbopack:///[turbopack-node]/child_process/evaluate.ts:89:23)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] 
+    at handleErrors (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+    at processMessage (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2834:28)
+    at <unknown> (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2679:13)
+    at WebSocket.handleMessage (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2324:17) (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+[browser] ./app/globals.css
+Error evaluating Node.js code
+CssSyntaxError: tailwindcss: C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\app\globals.css:1:1: "./dist/tw-animate.css" is not exported under the condition "style" from package C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\tw-animate-css (see exports field in C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\tw-animate-css\package.json)
+    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
+    [at Root.error (turbopack:///[project]/node_modules/postcss/lib/node.js:146:32)]
+    [at Object.Once (C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\@tailwindcss\postcss\dist\index.js:10:6913)]
+    [at process.processTicksAndRejections (node:internal/process/task_queues:103:5)]
+    [at async LazyResult.runAsync (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:293:11)]
+    [at async transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:34)]
+    [at async run (turbopack:///[turbopack-node]/child_process/evaluate.ts:89:23)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] 
+    at handleErrors (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+    at processMessage (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2834:28)
+    at <unknown> (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2679:13)
+    at WebSocket.handleMessage (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2324:17) (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+[browser] ./app/globals.css
+Error evaluating Node.js code
+CssSyntaxError: tailwindcss: C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\app\globals.css:1:1: "./dist/tw-animate.css" is not exported under the condition "style" from package C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\tw-animate-css (see exports field in C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\tw-animate-css\package.json)
+    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
+    [at Root.error (turbopack:///[project]/node_modules/postcss/lib/node.js:146:32)]
+    [at Object.Once (C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\@tailwindcss\postcss\dist\index.js:10:6913)]
+    [at process.processTicksAndRejections (node:internal/process/task_queues:103:5)]
+    [at async LazyResult.runAsync (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:293:11)]
+    [at async transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:34)]
+    [at async run (turbopack:///[turbopack-node]/child_process/evaluate.ts:89:23)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] 
+    at handleErrors (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+    at processMessage (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2834:28)
+    at <unknown> (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2679:13)
+    at WebSocket.handleMessage (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2324:17) (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+[browser] ./app/globals.css
+Error evaluating Node.js code
+CssSyntaxError: tailwindcss: C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\app\globals.css:1:1: "./dist/tw-animate.css" is not exported under the condition "style" from package C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\tw-animate-css (see exports field in C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\tw-animate-css\package.json)
+    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
+    [at Root.error (turbopack:///[project]/node_modules/postcss/lib/node.js:146:32)]
+    [at Object.Once (C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\@tailwindcss\postcss\dist\index.js:10:6913)]
+    [at process.processTicksAndRejections (node:internal/process/task_queues:103:5)]
+    [at async LazyResult.runAsync (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:293:11)]
+    [at async transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:34)]
+    [at async run (turbopack:///[turbopack-node]/child_process/evaluate.ts:89:23)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] 
+    at handleErrors (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+    at processMessage (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2834:28)
+    at <unknown> (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2679:13)
+    at WebSocket.handleMessage (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2324:17) (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+[browser] ./app/globals.css
+Error evaluating Node.js code
+CssSyntaxError: tailwindcss: C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\app\globals.css:1:1: "./dist/tw-animate.css" is not exported under the condition "style" from package C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\tw-animate-css (see exports field in C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\tw-animate-css\package.json)
+    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
+    [at Root.error (turbopack:///[project]/node_modules/postcss/lib/node.js:146:32)]
+    [at Object.Once (C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\@tailwindcss\postcss\dist\index.js:10:6913)]
+    [at process.processTicksAndRejections (node:internal/process/task_queues:103:5)]
+    [at async LazyResult.runAsync (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:293:11)]
+    [at async transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:34)]
+    [at async run (turbopack:///[turbopack-node]/child_process/evaluate.ts:89:23)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] 
+    at handleErrors (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+    at processMessage (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2834:28)
+    at <unknown> (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2679:13)
+    at WebSocket.handleMessage (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2324:17) (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+
+-----
+[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to C:\Users\Mohamad\AppData\Local\Temp\next-panic-44830ea743bcb174214f137244897a57.log.
+
+To help make Turbopack better, report this error by clicking here: https://bugs.nextjs.org/search?category=turbopack-error-report&title=Turbopack%20Error%3A%20%5Bproject%5D%2Fapp%2Fglobals.css%20%5Bapp-client%5D%20%28css%29&body=Turbopack%20version%3A%20%6052faae3d%60%0ANext.js%20version%3A%20%600.0.0%60%0A%0AError%20message%3A%0A%60%60%60%0A%5Bproject%5D%2Fapp%2Fglobals.css%20%5Bapp-client%5D%20%28css%29%0A%0ACaused%20by%3A%0A-%20reading%20file%20%22C%3A%5C%5CUsers%5C%5CMohamad%5C%5CDocuments%5C%5CVisual%20Studio%20Code%5C%5CDamiraWebsite2%5C%5Cdamira-pharma-site%5C%5Cnul%22%0A-%20Incorrect%20function.%20%28os%20error%201%29%0A%0ADebug%20info%3A%0A-%20Execution%20of%20subscribe_issues_and_diags_operation%20failed%0A-%20Execution%20of%20%3CAppEndpoint%20as%20Endpoint%3E%3A%3Aserver_changed%20failed%0A-%20Execution%20of%20%2AProject%3A%3Aserver_changed%20failed%0A-%20Execution%20of%20%2AAppEndpointOutput%3A%3Aserver_assets%20failed%0A-%20Execution%20of%20AppEndpoint%3A%3Aoutput%20failed%0A-%20Execution%20of%20AppProject%3A%3Aapp_module_graphs%20failed%0A-%20Execution%20of%20%2A%3CAppEndpoint%20as%20Endpoint%3E%3A%3Aadditional_entries%20failed%0A-%20Execution%20of%20ModuleGraph%3A%3Afrom_graphs%20failed%0A-%20Execution%20of%20ModuleGraph%3A%3Acreate%20failed%0A-%20Execution%20of%20SingleModuleGraph%3A%3Anew_with_entries_visited_intern%20failed%0A-%20%5Bproject%5D%2Fapp%2Fglobals.css%20%5Bapp-client%5D%20%28css%29%0A-%20Execution%20of%20primary_chunkable_referenced_modules%20failed%0A-%20Execution%20of%20%3CCssModule%20as%20Module%3E%3A%3Areferences%20failed%0A-%20Execution%20of%20parse_css%20failed%0A-%20Execution%20of%20%3CPostCssTransformedAsset%20as%20Asset%3E%3A%3Acontent%20failed%0A-%20Execution%20of%20PostCssTransformedAsset%3A%3Aprocess%20failed%0A-%20Execution%20of%20evaluate_webpack_loader%20failed%0A-%20Execution%20of%20%3CDiskFileSystem%20as%20FileSystem%3E%3A%3Aread%20failed%0A-%20reading%20file%20%22C%3A%5C%5CUsers%5C%5CMohamad%5C%5CDocuments%5C%5CVisual%20Studio%20Code%5C%5CDamiraWebsite2%5C%5Cdamira-pharma-site%5C%5Cnul%22%0A-%20Incorrect%20function.%20%28os%20error%201%29%0A%60%60%60&labels=Turbopack,Turbopack%20Panic%20Backtrace
+-----
+
+✓ Compiled in 550ms
+[browser] ./app/globals.css
+Error evaluating Node.js code
+CssSyntaxError: tailwindcss: C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\app\globals.css:1:1: "./dist/tw-animate.css" is not exported under the condition "style" from package C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\tw-animate-css (see exports field in C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\tw-animate-css\package.json)
+    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
+    [at Root.error (turbopack:///[project]/node_modules/postcss/lib/node.js:146:32)]
+    [at Object.Once (C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\@tailwindcss\postcss\dist\index.js:10:6913)]
+    [at process.processTicksAndRejections (node:internal/process/task_queues:103:5)]
+    [at async LazyResult.runAsync (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:293:11)]
+    [at async transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:34)]
+    [at async run (turbopack:///[turbopack-node]/child_process/evaluate.ts:89:23)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] 
+    at handleErrors (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+    at processMessage (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2834:28)
+    at <unknown> (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2679:13)
+    at WebSocket.handleMessage (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2324:17) (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+
+-----
+[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to C:\Users\Mohamad\AppData\Local\Temp\next-panic-44830ea743bcb174214f137244897a57.log.
+
+To help make Turbopack better, report this error by clicking here: https://bugs.nextjs.org/search?category=turbopack-error-report&title=Turbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2F%28admin-auth%29%2Fadmin%2Flogin%2Fpage&body=Turbopack%20version%3A%20%6052faae3d%60%0ANext.js%20version%3A%20%600.0.0%60%0A%0AError%20message%3A%0A%60%60%60%0AFailed%20to%20write%20app%20endpoint%20%2F%28admin-auth%29%2Fadmin%2Flogin%2Fpage%0A%0ACaused%20by%3A%0A-%20%5Bproject%5D%2Fapp%2Fglobals.css%20%5Bapp-client%5D%20%28css%29%0A-%20reading%20file%20%22C%3A%5C%5CUsers%5C%5CMohamad%5C%5CDocuments%5C%5CVisual%20Studio%20Code%5C%5CDamiraWebsite2%5C%5Cdamira-pharma-site%5C%5Cnul%22%0A-%20Incorrect%20function.%20%28os%20error%201%29%0A%0ADebug%20info%3A%0A-%20Execution%20of%20get_written_endpoint_with_issues_operation%20failed%0A-%20Execution%20of%20endpoint_write_to_disk%20failed%0A-%20Execution%20of%20%3CAppEndpoint%20as%20Endpoint%3E%3A%3Aoutput%20failed%0A-%20Failed%20to%20write%20app%20endpoint%20%2F%28admin-auth%29%2Fadmin%2Flogin%2Fpage%0A-%20Execution%20of%20%2Aall_asset_paths%20failed%0A-%20Execution%20of%20%2AAppEndpointOutput%3A%3Aoutput_assets%20failed%0A-%20Execution%20of%20AppEndpoint%3A%3Aoutput%20failed%0A-%20Execution%20of%20AppProject%3A%3Aapp_module_graphs%20failed%0A-%20Execution%20of%20%2A%3CAppEndpoint%20as%20Endpoint%3E%3A%3Aadditional_entries%20failed%0A-%20Execution%20of%20ModuleGraph%3A%3Afrom_graphs%20failed%0A-%20Execution%20of%20ModuleGraph%3A%3Acreate%20failed%0A-%20Execution%20of%20SingleModuleGraph%3A%3Anew_with_entries_visited_intern%20failed%0A-%20%5Bproject%5D%2Fapp%2Fglobals.css%20%5Bapp-client%5D%20%28css%29%0A-%20Execution%20of%20primary_chunkable_referenced_modules%20failed%0A-%20Execution%20of%20%3CCssModule%20as%20Module%3E%3A%3Areferences%20failed%0A-%20Execution%20of%20parse_css%20failed%0A-%20Execution%20of%20%3CPostCssTransformedAsset%20as%20Asset%3E%3A%3Acontent%20failed%0A-%20Execution%20of%20PostCssTransformedAsset%3A%3Aprocess%20failed%0A-%20Execution%20of%20evaluate_webpack_loader%20failed%0A-%20Execution%20of%20%3CDiskFileSystem%20as%20FileSystem%3E%3A%3Aread%20failed%0A-%20reading%20file%20%22C%3A%5C%5CUsers%5C%5CMohamad%5C%5CDocuments%5C%5CVisual%20Studio%20Code%5C%5CDamiraWebsite2%5C%5Cdamira-pharma-site%5C%5Cnul%22%0A-%20Incorrect%20function.%20%28os%20error%201%29%0A%60%60%60&labels=Turbopack,Turbopack%20Panic%20Backtrace
+-----
+
+ GET /admin/login 500 in 36ms (next.js: 7ms, proxy.ts: 18ms, application-code: 11ms)
+[browser] Uncaught Error: ./app/globals.css
+Error evaluating Node.js code
+CssSyntaxError: tailwindcss: C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\app\globals.css:1:1: "./dist/tw-animate.css" is not exported under the condition "style" from package C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\tw-animate-css (see exports field in C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\tw-animate-css\package.json)
+    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
+    [at Root.error (turbopack:///[project]/node_modules/postcss/lib/node.js:146:32)]
+    [at Object.Once (C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\@tailwindcss\postcss\dist\index.js:10:6913)]
+    [at process.processTicksAndRejections (node:internal/process/task_queues:103:5)]
+    [at async LazyResult.runAsync (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:293:11)]
+    [at async transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:34)]
+    [at async run (turbopack:///[turbopack-node]/child_process/evaluate.ts:89:23)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+
+
+[browser] ./app/globals.css
+Error evaluating Node.js code
+CssSyntaxError: tailwindcss: C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\app\globals.css:1:1: "./dist/tw-animate.css" is not exported under the condition "style" from package C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\tw-animate-css (see exports field in C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\tw-animate-css\package.json)
+    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
+    [at Root.error (turbopack:///[project]/node_modules/postcss/lib/node.js:146:32)]
+    [at Object.Once (C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\@tailwindcss\postcss\dist\index.js:10:6913)]
+    [at process.processTicksAndRejections (node:internal/process/task_queues:103:5)]
+    [at async LazyResult.runAsync (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:293:11)]
+    [at async transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:34)]
+    [at async run (turbopack:///[turbopack-node]/child_process/evaluate.ts:89:23)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] 
+    at handleErrors (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+    at processMessage (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2834:28)
+    at <unknown> (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2679:13)
+    at WebSocket.handleMessage (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2324:17) (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+[browser] ./app/globals.css
+Error evaluating Node.js code
+CssSyntaxError: tailwindcss: C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\app\globals.css:1:1: "./dist/tw-animate.css" is not exported under the condition "style" from package C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\tw-animate-css (see exports field in C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\tw-animate-css\package.json)
+    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
+    [at Root.error (turbopack:///[project]/node_modules/postcss/lib/node.js:146:32)]
+    [at Object.Once (C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\@tailwindcss\postcss\dist\index.js:10:6913)]
+    [at process.processTicksAndRejections (node:internal/process/task_queues:103:5)]
+    [at async LazyResult.runAsync (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:293:11)]
+    [at async transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:34)]
+    [at async run (turbopack:///[turbopack-node]/child_process/evaluate.ts:89:23)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] 
+    at handleErrors (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+    at processMessage (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2834:28)
+    at <unknown> (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2679:13)
+    at WebSocket.handleMessage (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2324:17) (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+[browser] ./app/globals.css
+Error evaluating Node.js code
+CssSyntaxError: tailwindcss: C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\app\globals.css:1:1: "./dist/tw-animate.css" is not exported under the condition "style" from package C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\tw-animate-css (see exports field in C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\tw-animate-css\package.json)
+    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
+    [at Root.error (turbopack:///[project]/node_modules/postcss/lib/node.js:146:32)]
+    [at Object.Once (C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\@tailwindcss\postcss\dist\index.js:10:6913)]
+    [at process.processTicksAndRejections (node:internal/process/task_queues:103:5)]
+    [at async LazyResult.runAsync (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:293:11)]
+    [at async transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:34)]
+    [at async run (turbopack:///[turbopack-node]/child_process/evaluate.ts:89:23)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] 
+    at handleErrors (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+    at processMessage (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2834:28)
+    at <unknown> (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2679:13)
+    at WebSocket.handleMessage (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2324:17) (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+[browser] ./app/globals.css
+Error evaluating Node.js code
+CssSyntaxError: tailwindcss: C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\app\globals.css:1:1: "./dist/tw-animate.css" is not exported under the condition "style" from package C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\tw-animate-css (see exports field in C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\tw-animate-css\package.json)
+    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
+    [at Root.error (turbopack:///[project]/node_modules/postcss/lib/node.js:146:32)]
+    [at Object.Once (C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\@tailwindcss\postcss\dist\index.js:10:6913)]
+    [at process.processTicksAndRejections (node:internal/process/task_queues:103:5)]
+    [at async LazyResult.runAsync (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:293:11)]
+    [at async transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:34)]
+    [at async run (turbopack:///[turbopack-node]/child_process/evaluate.ts:89:23)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] 
+    at handleErrors (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+    at processMessage (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2834:28)
+    at <unknown> (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2679:13)
+    at WebSocket.handleMessage (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2324:17) (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+[browser] ./app/globals.css
+Error evaluating Node.js code
+CssSyntaxError: tailwindcss: C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\app\globals.css:1:1: "./dist/tw-animate.css" is not exported under the condition "style" from package C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\tw-animate-css (see exports field in C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\tw-animate-css\package.json)
+    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
+    [at Root.error (turbopack:///[project]/node_modules/postcss/lib/node.js:146:32)]
+    [at Object.Once (C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\@tailwindcss\postcss\dist\index.js:10:6913)]
+    [at process.processTicksAndRejections (node:internal/process/task_queues:103:5)]
+    [at async LazyResult.runAsync (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:293:11)]
+    [at async transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:34)]
+    [at async run (turbopack:///[turbopack-node]/child_process/evaluate.ts:89:23)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] 
+    at handleErrors (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+    at processMessage (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2834:28)
+    at <unknown> (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2679:13)
+    at WebSocket.handleMessage (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2324:17) (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+[browser] ./app/globals.css
+Error evaluating Node.js code
+CssSyntaxError: tailwindcss: C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\app\globals.css:1:1: "./dist/tw-animate.css" is not exported under the condition "style" from package C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\tw-animate-css (see exports field in C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\tw-animate-css\package.json)
+    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
+    [at Root.error (turbopack:///[project]/node_modules/postcss/lib/node.js:146:32)]
+    [at Object.Once (C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\@tailwindcss\postcss\dist\index.js:10:6913)]
+    [at process.processTicksAndRejections (node:internal/process/task_queues:103:5)]
+    [at async LazyResult.runAsync (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:293:11)]
+    [at async transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:34)]
+    [at async run (turbopack:///[turbopack-node]/child_process/evaluate.ts:89:23)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] 
+    at handleErrors (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+    at processMessage (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2834:28)
+    at <unknown> (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2679:13)
+    at WebSocket.handleMessage (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2324:17) (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+[browser] ./app/globals.css
+Error evaluating Node.js code
+CssSyntaxError: tailwindcss: C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\app\globals.css:1:1: "./dist/tw-animate.css" is not exported under the condition "style" from package C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\tw-animate-css (see exports field in C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\tw-animate-css\package.json)
+    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
+    [at Root.error (turbopack:///[project]/node_modules/postcss/lib/node.js:146:32)]
+    [at Object.Once (C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\@tailwindcss\postcss\dist\index.js:10:6913)]
+    [at process.processTicksAndRejections (node:internal/process/task_queues:103:5)]
+    [at async LazyResult.runAsync (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:293:11)]
+    [at async transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:34)]
+    [at async run (turbopack:///[turbopack-node]/child_process/evaluate.ts:89:23)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] 
+    at handleErrors (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+    at processMessage (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2834:28)
+    at <unknown> (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2679:13)
+    at WebSocket.handleMessage (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2324:17) (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+[browser] ./app/globals.css
+Error evaluating Node.js code
+CssSyntaxError: tailwindcss: C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\app\globals.css:1:1: "./dist/tw-animate.css" is not exported under the condition "style" from package C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\tw-animate-css (see exports field in C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\tw-animate-css\package.json)
+    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
+    [at Root.error (turbopack:///[project]/node_modules/postcss/lib/node.js:146:32)]
+    [at Object.Once (C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\@tailwindcss\postcss\dist\index.js:10:6913)]
+    [at process.processTicksAndRejections (node:internal/process/task_queues:103:5)]
+    [at async LazyResult.runAsync (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:293:11)]
+    [at async transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:34)]
+    [at async run (turbopack:///[turbopack-node]/child_process/evaluate.ts:89:23)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] 
+    at handleErrors (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+    at processMessage (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2834:28)
+    at <unknown> (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2679:13)
+    at WebSocket.handleMessage (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2324:17) (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+[browser] ./app/globals.css
+Error evaluating Node.js code
+CssSyntaxError: tailwindcss: C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\app\globals.css:1:1: "./dist/tw-animate.css" is not exported under the condition "style" from package C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\tw-animate-css (see exports field in C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\tw-animate-css\package.json)
+    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
+    [at Root.error (turbopack:///[project]/node_modules/postcss/lib/node.js:146:32)]
+    [at Object.Once (C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\@tailwindcss\postcss\dist\index.js:10:6913)]
+    [at process.processTicksAndRejections (node:internal/process/task_queues:103:5)]
+    [at async LazyResult.runAsync (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:293:11)]
+    [at async transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:34)]
+    [at async run (turbopack:///[turbopack-node]/child_process/evaluate.ts:89:23)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] 
+    at handleErrors (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+    at processMessage (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2834:28)
+    at <unknown> (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2679:13)
+    at WebSocket.handleMessage (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2324:17) (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+[browser] ./app/globals.css
+Error evaluating Node.js code
+CssSyntaxError: tailwindcss: C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\app\globals.css:1:1: "./dist/tw-animate.css" is not exported under the condition "style" from package C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\tw-animate-css (see exports field in C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\tw-animate-css\package.json)
+    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
+    [at Root.error (turbopack:///[project]/node_modules/postcss/lib/node.js:146:32)]
+    [at Object.Once (C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\@tailwindcss\postcss\dist\index.js:10:6913)]
+    [at process.processTicksAndRejections (node:internal/process/task_queues:103:5)]
+    [at async LazyResult.runAsync (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:293:11)]
+    [at async transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:34)]
+    [at async run (turbopack:///[turbopack-node]/child_process/evaluate.ts:89:23)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] 
+    at handleErrors (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+    at processMessage (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2834:28)
+    at <unknown> (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2679:13)
+    at WebSocket.handleMessage (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2324:17) (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+Persisting failed: Unable to open static sorted file referenced from 00000084.meta
+
+Caused by:
+    0: Unable to open static sorted file 00000083.sst
+    1: Failed to open SST file C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\.next\dev\cache/turbopack\52faae3d\00000083.sst
+    2: The system cannot find the file specified. (os error 2)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+[browser] ./app/globals.css
+Error evaluating Node.js code
+CssSyntaxError: tailwindcss: C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\app\globals.css:1:1: "./dist/tw-animate.css" is not exported under the condition "style" from package C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\tw-animate-css (see exports field in C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\tw-animate-css\package.json)
+    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
+    [at Root.error (turbopack:///[project]/node_modules/postcss/lib/node.js:146:32)]
+    [at Object.Once (C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\node_modules\@tailwindcss\postcss\dist\index.js:10:6913)]
+    [at process.processTicksAndRejections (node:internal/process/task_queues:103:5)]
+    [at async LazyResult.runAsync (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:293:11)]
+    [at async transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:34)]
+    [at async run (turbopack:///[turbopack-node]/child_process/evaluate.ts:89:23)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] 
+    at handleErrors (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+    at processMessage (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2834:28)
+    at <unknown> (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2679:13)
+    at WebSocket.handleMessage (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2324:17) (file://C:/Users/Mohamad/Documents/Visual Studio Code/DamiraWebsite2/damira-pharma-site/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+✓ Compiled in 12ms
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+[?25h

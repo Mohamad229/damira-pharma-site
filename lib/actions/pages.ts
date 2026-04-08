@@ -244,11 +244,25 @@ export async function createPage(input: PageCreateInput): Promise<ActionState<Pa
         data: {
           pageId: newPage.id,
           locale: 'en',
-          title: validatedInput.title,
-          metaTitle: validatedInput.metaTitle,
-          metaDescription: validatedInput.metaDescription,
+          title: validatedInput.translations?.en?.title || validatedInput.title,
+          metaTitle: validatedInput.translations?.en?.metaTitle || validatedInput.metaTitle,
+          metaDescription:
+            validatedInput.translations?.en?.metaDescription || validatedInput.metaDescription,
         },
       });
+
+      // Create Arabic translation if provided
+      if (validatedInput.translations?.ar?.title) {
+        await tx.pageTranslation.create({
+          data: {
+            pageId: newPage.id,
+            locale: 'ar',
+            title: validatedInput.translations.ar.title,
+            metaTitle: validatedInput.translations.ar.metaTitle || null,
+            metaDescription: validatedInput.translations.ar.metaDescription || null,
+          },
+        });
+      }
 
       // Return full page with translations
       return tx.page.findUniqueOrThrow({
@@ -332,22 +346,64 @@ export async function updatePage(input: PageUpdateInput): Promise<ActionState<Pa
         },
       });
 
-      // Update English translation if title/meta fields provided
-      if (validatedInput.title || validatedInput.metaTitle !== undefined) {
-        const translation = await tx.pageTranslation.findFirst({
+      // Update English translation
+      const enTranslation = await tx.pageTranslation.findFirst({
+        where: {
+          pageId: validatedInput.id,
+          locale: 'en',
+        },
+      });
+
+      if (enTranslation) {
+        await tx.pageTranslation.update({
+          where: { id: enTranslation.id },
+          data: {
+            title:
+              validatedInput.translations?.en?.title ||
+              validatedInput.title ||
+              enTranslation.title,
+            metaTitle:
+              validatedInput.translations?.en?.metaTitle !== undefined
+                ? validatedInput.translations.en.metaTitle
+                : validatedInput.metaTitle !== undefined
+                  ? validatedInput.metaTitle
+                  : enTranslation.metaTitle,
+            metaDescription:
+              validatedInput.translations?.en?.metaDescription !== undefined
+                ? validatedInput.translations.en.metaDescription
+                : validatedInput.metaDescription !== undefined
+                  ? validatedInput.metaDescription
+                  : enTranslation.metaDescription,
+          },
+        });
+      }
+
+      // Update or create Arabic translation
+      if (validatedInput.translations?.ar?.title) {
+        const arTranslation = await tx.pageTranslation.findFirst({
           where: {
             pageId: validatedInput.id,
-            locale: 'en',
+            locale: 'ar',
           },
         });
 
-        if (translation) {
+        if (arTranslation) {
           await tx.pageTranslation.update({
-            where: { id: translation.id },
+            where: { id: arTranslation.id },
             data: {
-              title: validatedInput.title ?? translation.title,
-              metaTitle: validatedInput.metaTitle ?? translation.metaTitle,
-              metaDescription: validatedInput.metaDescription ?? translation.metaDescription,
+              title: validatedInput.translations.ar.title,
+              metaTitle: validatedInput.translations.ar.metaTitle || null,
+              metaDescription: validatedInput.translations.ar.metaDescription || null,
+            },
+          });
+        } else {
+          await tx.pageTranslation.create({
+            data: {
+              pageId: validatedInput.id,
+              locale: 'ar',
+              title: validatedInput.translations.ar.title,
+              metaTitle: validatedInput.translations.ar.metaTitle || null,
+              metaDescription: validatedInput.translations.ar.metaDescription || null,
             },
           });
         }

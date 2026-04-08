@@ -88,6 +88,26 @@ export const PageCreateSchema = z.object({
 
   // Publishing
   isPublished: z.boolean().optional().default(false),
+
+  // Bilingual translations (optional)
+  translations: z
+    .object({
+      en: z
+        .object({
+          title: z.string().optional(),
+          metaTitle: z.string().optional().nullable(),
+          metaDescription: z.string().optional().nullable(),
+        })
+        .optional(),
+      ar: z
+        .object({
+          title: z.string().optional(),
+          metaTitle: z.string().optional().nullable(),
+          metaDescription: z.string().optional().nullable(),
+        })
+        .optional(),
+    })
+    .optional(),
 });
 
 // ============================================================================
@@ -118,6 +138,26 @@ export const PageUpdateSchema = z.object({
     .optional()
     .nullable(),
   isPublished: z.boolean().optional(),
+
+  // Bilingual translations (optional)
+  translations: z
+    .object({
+      en: z
+        .object({
+          title: z.string().optional(),
+          metaTitle: z.string().optional().nullable(),
+          metaDescription: z.string().optional().nullable(),
+        })
+        .optional(),
+      ar: z
+        .object({
+          title: z.string().optional(),
+          metaTitle: z.string().optional().nullable(),
+          metaDescription: z.string().optional().nullable(),
+        })
+        .optional(),
+    })
+    .optional(),
 });
 
 // ============================================================================

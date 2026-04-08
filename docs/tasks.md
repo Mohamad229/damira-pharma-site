@@ -35,14 +35,14 @@ This document outlines the major milestones and tasks for building the Damira Ph
 
 ### Tasks
 
-- [ ] **1.1** Install and configure all dependencies (Prisma, Auth.js, next-intl, shadcn/ui, Zod, Tiptap, TanStack Table, Lucide React)
-- [ ] **1.2** Set up PostgreSQL database and initialize Prisma with connection
-- [ ] **1.3** Design and implement complete Prisma schema (User, Product, ProductTranslation, ProductAdvancedDetails, ProductAttachment, Page, PageTranslation, PageSection, PageSectionTranslation, Category, TherapeuticArea, Manufacturer, Media, FormSubmission)
-- [ ] **1.4** Run initial migration and create seed script (admin user, categories, therapeutic areas, manufacturers)
-- [ ] **1.5** Set up project folder structure with route groups (`(public)`, `(admin)`) and configure next-intl middleware for locale routing
-- [ ] **1.6** Configure RTL support and set up bilingual typography (Inter/Plus Jakarta Sans for EN, Cairo for AR)
-- [ ] **1.7** Create design tokens and configure Tailwind theme with Damira brand colors (Primary Blue/Cyan, Green, Orange accents) - Reference `docs/profile/` for brand direction
-- [ ] **1.8** Set up file storage abstraction (local dev, S3/R2 production) and environment variables structure
+- [x] **1.1** Install and configure all dependencies (Prisma, Auth.js, next-intl, shadcn/ui, Zod, Tiptap, TanStack Table, Lucide React)
+- [x] **1.2** Set up PostgreSQL database and initialize Prisma with connection
+- [x] **1.3** Design and implement complete Prisma schema (User, Product, ProductTranslation, ProductAdvancedDetails, ProductAttachment, Page, PageTranslation, PageSection, PageSectionTranslation, Category, TherapeuticArea, Manufacturer, Media, FormSubmission)
+- [x] **1.4** Run initial migration and create seed script (admin user, categories, therapeutic areas, manufacturers)
+- [x] **1.5** Set up project folder structure with route groups (`(public)`, `(admin)`) and configure next-intl middleware for locale routing
+- [x] **1.6** Configure RTL support and set up bilingual typography (Inter/Plus Jakarta Sans for EN, Cairo for AR)
+- [x] **1.7** Create design tokens and configure Tailwind theme with Damira brand colors (Primary Blue/Cyan, Green, Orange accents) - Reference `docs/profile/` for brand direction
+- [x] **1.8** Set up file storage abstraction (local dev, S3/R2 production) and environment variables structure
 
 **Deliverables:**
 - Fully configured development environment
@@ -60,11 +60,11 @@ This document outlines the major milestones and tasks for building the Damira Ph
 
 ### Tasks
 
-- [ ] **2.1** Configure Auth.js with credentials provider, session strategy, and password hashing
-- [ ] **2.2** Create authentication server actions (login, logout) with Zod validation
-- [ ] **2.3** Build admin login page UI (`/admin/login`) with form, error handling, and loading states
-- [ ] **2.4** Create auth middleware for protecting admin routes and session provider wrapper
-- [ ] **2.5** Implement user CRUD server actions with role-based access (Admin, Internal User)
+- [x] **2.1** Configure Auth.js with credentials provider, session strategy, and password hashing
+- [x] **2.2** Create authentication server actions (login, logout) with Zod validation
+- [x] **2.3** Build admin login page UI (`/admin/login`) with form, error handling, and loading states
+- [x] **2.4** Create auth middleware for protecting admin routes and session provider wrapper
+- [x] **2.5** Implement user CRUD server actions with role-based access (Admin, Internal User)
 
 **Deliverables:**
 - Working `/admin/login` page
@@ -81,11 +81,11 @@ This document outlines the major milestones and tasks for building the Damira Ph
 
 ### Tasks
 
-- [ ] **3.1** Create admin root layout with sidebar navigation, top header bar (user info, logout), and mobile-responsive collapsible sidebar
-- [ ] **3.2** Build navigation components (sidebar items, breadcrumbs, page headers) for all modules (Dashboard, Products, Pages, Sections, Forms, Media, Settings, Users)
-- [ ] **3.3** Create dashboard overview page with placeholder stats cards (products count, submissions count, etc.)
-- [ ] **3.4** Build reusable admin UI components (Card, Button variants, Input/Form fields, Modal/Dialog, Toast/Notification)
-- [ ] **3.5** Create admin error boundaries (loading.tsx, error.tsx, not-found.tsx) and apply Damira brand color scheme
+- [x] **3.1** Create admin root layout with sidebar navigation, top header bar (user info, logout), and mobile-responsive collapsible sidebar
+- [x] **3.2** Build navigation components (sidebar items, breadcrumbs, page headers) for all modules (Dashboard, Products, Pages, Sections, Forms, Media, Settings, Users)
+- [x] **3.3** Create dashboard overview page with placeholder stats cards (products count, submissions count, etc.)
+- [x] **3.4** Build reusable admin UI components (Card, Button variants, Input/Form fields, Modal/Dialog, Toast/Notification)
+- [x] **3.5** Create admin error boundaries (loading.tsx, error.tsx, not-found.tsx) and apply Damira brand color scheme
 
 **Deliverables:**
 - Complete admin shell with navigation
@@ -102,11 +102,11 @@ This document outlines the major milestones and tasks for building the Damira Ph
 
 ### Tasks
 
-- [ ] **4.1** Create media upload API route with file validation, storage integration, and database record creation
-- [ ] **4.2** Build media CRUD server actions (listing with pagination, deletion)
-- [ ] **4.3** Create media library page with grid/list views, drag-and-drop upload zone, and progress indicator
-- [ ] **4.4** Implement media search/filter (by name, type), image preview modal, and file metadata display
-- [ ] **4.5** Build reusable MediaPicker modal component with single/multi select modes and copy URL functionality
+- [x] **4.1** Create media upload API route with file validation, storage integration, and database record creation
+- [x] **4.2** Build media CRUD server actions (listing with pagination, deletion)
+- [x] **4.3** Create media library page with grid/list views, drag-and-drop upload zone, and progress indicator
+- [x] **4.4** Implement media search/filter (by name, type), image preview modal, and file metadata display
+- [x] **4.5** Build reusable MediaPicker modal component with single/multi select modes and copy URL functionality
 
 **Deliverables:**
 - `/admin/media` page with full upload functionality
@@ -123,12 +123,12 @@ This document outlines the major milestones and tasks for building the Damira Ph
 
 ### Tasks
 
-- [ ] **5.1** Create product CRUD server actions (list with filters/pagination, fetch single, create, update, delete, status toggle) with Zod validation
-- [ ] **5.2** Build products listing page with TanStack Table (columns: name, category, status, therapeutic area, actions; sorting, filtering, pagination)
-- [ ] **5.3** Create product create/edit pages with type selector (Simple/Advanced) and dynamic form fields
-- [ ] **5.4** Build product form with all fields: base info, advanced fields (storage conditions, regulatory), dropdowns (category, therapeutic area, manufacturer), status selector
-- [ ] **5.5** Integrate MediaPicker for cover image and attachments, implement bilingual tabs (EN/AR) for ProductTranslation
-- [ ] **5.6** Add form validation display, submission loading states, success/error toasts, and delete confirmation modal
+- [x] **5.1** Create product CRUD server actions (list with filters/pagination, fetch single, create, update, delete, status toggle) with Zod validation
+- [x] **5.2** Build products listing page with TanStack Table (columns: name, category, status, therapeutic area, actions; sorting, filtering, pagination)
+- [x] **5.3** Create product create/edit pages with type selector (Simple/Advanced) and dynamic form fields
+- [x] **5.4** Build product form with all fields: base info, advanced fields (storage conditions, regulatory), dropdowns (category, therapeutic area, manufacturer), status selector
+- [x] **5.5** Integrate MediaPicker for cover image and attachments, implement bilingual tabs (EN/AR) for ProductTranslation
+- [x] **5.6** Add form validation display, submission loading states, success/error toasts, and delete confirmation modal
 
 **Deliverables:**
 - `/admin/products` listing page with filtering/sorting

@@ -1,0 +1,66 @@
+
+> damira-pharma-site@0.1.0 build
+> next build
+
+▲ Next.js 16.2.2 (Turbopack)
+- Environments: .env
+
+⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+  Creating an optimized production build ...
+✓ Compiled successfully in 4.6s
+  Running TypeScript ...
+  Finished TypeScript in 5.7s ...
+  Collecting page data using 11 workers ...
+  Generating static pages using 11 workers (0/27) ...
+  Generating static pages using 11 workers (6/27) 
+  Generating static pages using 11 workers (13/27) 
+  Generating static pages using 11 workers (20/27) 
+✓ Generating static pages using 11 workers (27/27) in 747ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ● /[locale]
+│ ├ /en
+│ └ /ar
+├ ● /[locale]/about
+│ ├ /en/about
+│ └ /ar/about
+├ ● /[locale]/compliance
+│ ├ /en/compliance
+│ └ /ar/compliance
+├ ● /[locale]/contact
+│ ├ /en/contact
+│ └ /ar/contact
+├ ● /[locale]/partnerships
+│ ├ /en/partnerships
+│ └ /ar/partnerships
+├ ● /[locale]/products
+│ ├ /en/products
+│ └ /ar/products
+├ ƒ /[locale]/products/[slug]
+├ ● /[locale]/services
+│ ├ /en/services
+│ └ /ar/services
+├ ○ /admin
+├ ○ /admin/forms
+├ ƒ /admin/forms/[id]
+├ ○ /admin/login
+├ ○ /admin/media
+├ ○ /admin/pages
+├ ƒ /admin/pages/[id]/edit
+├ ○ /admin/products
+├ ƒ /admin/products/[id]/edit
+├ ○ /admin/products/new
+├ ○ /admin/settings
+├ ○ /admin/users
+└ ƒ /api/auth/[...nextauth]
+
+
+ƒ Proxy (Middleware)
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses generateStaticParams)
+ƒ  (Dynamic)  server-rendered on demand
+
