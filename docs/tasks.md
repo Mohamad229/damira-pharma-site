@@ -145,12 +145,12 @@ This document outlines the major milestones and tasks for building the Damira Ph
 
 ### Tasks
 
-- [ ] **6.1** Create page and section CRUD server actions (list, fetch with sections, create, update, delete, reorder sections)
-- [ ] **6.2** Build pages listing page and page edit page with metadata form (title, slug, SEO)
-- [ ] **6.3** Create section management UI with drag-and-drop reordering, type selector, add/delete flows
-- [ ] **6.4** Define and build section type editors (hero, text/content, cards, stats, features, cta, image-text) - Reference `docs/profile/` images for section content examples
-- [ ] **6.5** Configure and style Tiptap editor with toolbar and MediaPicker image embedding
-- [ ] **6.6** Implement bilingual content tabs for page and section translations
+- [x] **6.1** Create page and section CRUD server actions (list, fetch with sections, create, update, delete, reorder sections)
+- [x] **6.2** Build pages listing page and page edit page with metadata form (title, slug, SEO)
+- [x] **6.3** Create section management UI with drag-and-drop reordering, type selector, add/delete flows
+- [x] **6.4** Define and build section type editors (hero, text/content, cards, stats, features, cta, image-text) - Reference `docs/profile/` images for section content examples
+- [x] **6.5** Configure and style Tiptap editor with toolbar and MediaPicker image embedding
+- [x] **6.6** Implement bilingual content tabs for page and section translations
 
 **Deliverables:**
 - `/admin/pages` listing and editor pages
