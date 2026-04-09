@@ -81,20 +81,20 @@ export function LanguageTabs({
         const hasUnsavedChanges = unsavedChanges?.[tab.id];
 
         return (
-          <button
-            key={tab.id}
-            onClick={() => handleTabClick(tab.id)}
-            className={cn(
-              'flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-all duration-200',
-              'relative cursor-pointer',
-              isActive
-                ? 'bg-background text-foreground shadow-sm border border-primary/20'
-                : 'text-muted-foreground hover:text-foreground hover:bg-background/50'
-            )}
-            aria-label={`Switch to ${tab.nativeLabel}`}
-            aria-pressed={isActive}
-            title={tab.nativeLabel}
-          >
+           <button
+             key={tab.id}
+             onClick={() => handleTabClick(tab.id)}
+             className={cn(
+               'flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-all duration-200',
+               'relative cursor-pointer',
+               isActive
+                 ? 'bg-background text-foreground shadow-sm border border-primary/20'
+                 : 'text-muted-foreground hover:text-foreground hover:bg-background/50'
+             )}
+             aria-label={isActive ? `${tab.nativeLabel} (current)` : `Switch to ${tab.nativeLabel}`}
+             aria-pressed={isActive}
+             title={tab.nativeLabel}
+           >
             {/* Flag Icon */}
             <span className="text-base leading-none">{tab.flag}</span>
 

@@ -381,33 +381,33 @@ export function PageFormClient({ mode, pageId, initialData }: PageFormClientProp
     children: React.ReactNode;
   }
 
-  const FormSection: React.FC<SectionProps> = ({ id, title, children }) => {
-    const isExpanded = expandedSections.has(id);
+   const FormSection: React.FC<SectionProps> = ({ id, title, children }) => {
+     const isExpanded = expandedSections.has(id);
 
-    return (
-      <div className="border rounded-lg overflow-hidden">
-        <button
-          type="button"
-          onClick={() => toggleSection(id)}
-          className="w-full px-6 py-4 flex items-center justify-between bg-muted hover:bg-muted/80 transition-colors"
-          aria-expanded={isExpanded}
-          aria-label={`${isExpanded ? 'Collapse' : 'Expand'} ${title} section`}
-        >
-          <h3 className="font-semibold text-sm">{title}</h3>
-          {isExpanded ? (
-            <ChevronUp className="h-4 w-4" aria-hidden="true" />
-          ) : (
-            <ChevronDown className="h-4 w-4" aria-hidden="true" />
-          )}
-        </button>
-        {isExpanded && (
-          <div className="px-6 py-4 space-y-4 border-t">
-            {children}
-          </div>
-        )}
-      </div>
-    );
-  };
+     return (
+       <div className="border rounded-lg overflow-hidden">
+         <button
+           type="button"
+           onClick={() => toggleSection(id)}
+           className="w-full px-6 py-4 flex items-center justify-between bg-muted hover:bg-muted/80 transition-colors"
+           aria-expanded={isExpanded}
+           aria-label={`${isExpanded ? 'Collapse' : 'Expand'} ${title} section`}
+         >
+           <div className="font-semibold text-sm">{title}</div>
+           {isExpanded ? (
+             <ChevronUp className="h-4 w-4" aria-hidden="true" />
+           ) : (
+             <ChevronDown className="h-4 w-4" aria-hidden="true" />
+           )}
+         </button>
+         {isExpanded && (
+           <div className="px-6 py-4 space-y-4 border-t">
+             {children}
+           </div>
+         )}
+       </div>
+     );
+   };
 
   if (isLoadingData) {
     return (
