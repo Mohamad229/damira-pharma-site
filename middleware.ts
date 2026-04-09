@@ -17,22 +17,28 @@ export default async function middleware(request: NextRequest) {
 
   // Handle admin routes with auth protection
   if (pathname.startsWith('/admin')) {
-    const session = await auth();
     const isLoginPage = pathname === '/admin/login';
-
-    // If not authenticated and not on login page, redirect to login
-    if (!session?.user && !isLoginPage) {
+    
+    // For login page, only check if already authenticated to redirect
+    // This avoids unnecessary session checks on the login page
+    if (isLoginPage) {
+      const session = await auth();
+      if (session?.user) {
+        const callbackUrl = request.nextUrl.searchParams.get('callbackUrl');
+        const redirectUrl = new URL(callbackUrl || '/admin', request.url);
+        return NextResponse.redirect(redirectUrl);
+      }
+      // Not authenticated, allow login page to render
+      return NextResponse.next();
+    }
+    
+    // For non-login admin routes, check authentication
+    const session = await auth();
+    if (!session?.user) {
       const loginUrl = new URL('/admin/login', request.url);
       // Store the original URL to redirect back after login
       loginUrl.searchParams.set('callbackUrl', pathname);
       return NextResponse.redirect(loginUrl);
-    }
-
-    // If authenticated and on login page, redirect to admin dashboard
-    if (session?.user && isLoginPage) {
-      const callbackUrl = request.nextUrl.searchParams.get('callbackUrl');
-      const redirectUrl = new URL(callbackUrl || '/admin', request.url);
-      return NextResponse.redirect(redirectUrl);
     }
 
     // Allow the request to proceed for authenticated admin routes

@@ -71,6 +71,8 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   ],
   session: {
     strategy: 'jwt',
+    // 30 days session expiration
+    maxAge: 30 * 24 * 60 * 60,
   },
   pages: {
     signIn: '/login',
@@ -91,4 +93,6 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
       return session;
     },
   },
+  // Trust the host to properly identify the application URL
+  trustHost: true,
 });

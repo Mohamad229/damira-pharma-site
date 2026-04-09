@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ToastProvider } from "@/components/ui/toast";
 import { Toaster } from "@/components/ui/toaster";
+import { AuthProvider } from "@/components/providers/auth-provider";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -16,10 +17,12 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning>
       <body>
-        <ToastProvider>
-          {children}
-          <Toaster />
-        </ToastProvider>
+        <AuthProvider>
+          <ToastProvider>
+            {children}
+            <Toaster />
+          </ToastProvider>
+        </AuthProvider>
       </body>
     </html>
   );

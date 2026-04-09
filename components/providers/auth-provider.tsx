@@ -1,11 +1,23 @@
 'use client';
 
 import { SessionProvider } from 'next-auth/react';
+import { ReactNode, memo } from 'react';
 
 interface AuthProviderProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
-export function AuthProvider({ children }: AuthProviderProps) {
-  return <SessionProvider>{children}</SessionProvider>;
+/**
+ * AuthProvider wraps the application with NextAuth SessionProvider.
+ * Memoized to prevent unnecessary re-renders that could trigger duplicate session requests.
+ */
+function AuthProviderComponent({ children }: AuthProviderProps) {
+  return (
+    <SessionProvider refetchInterval={0} refetchOnWindowFocus={false}>
+      {children}
+    </SessionProvider>
+  );
 }
+
+// Memoize to prevent re-renders from parent layout changes
+export const AuthProvider = memo(AuthProviderComponent);
