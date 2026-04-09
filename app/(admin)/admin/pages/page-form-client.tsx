@@ -390,12 +390,14 @@ export function PageFormClient({ mode, pageId, initialData }: PageFormClientProp
           type="button"
           onClick={() => toggleSection(id)}
           className="w-full px-6 py-4 flex items-center justify-between bg-muted hover:bg-muted/80 transition-colors"
+          aria-expanded={isExpanded}
+          aria-label={`${isExpanded ? 'Collapse' : 'Expand'} ${title} section`}
         >
           <h3 className="font-semibold text-sm">{title}</h3>
           {isExpanded ? (
-            <ChevronUp className="h-4 w-4" />
+            <ChevronUp className="h-4 w-4" aria-hidden="true" />
           ) : (
-            <ChevronDown className="h-4 w-4" />
+            <ChevronDown className="h-4 w-4" aria-hidden="true" />
           )}
         </button>
         {isExpanded && (
@@ -486,25 +488,28 @@ export function PageFormClient({ mode, pageId, initialData }: PageFormClientProp
               Page Title
               <span className="text-error ml-1">*</span>
             </Label>
-            <Input
-              id="title"
-              type="text"
-              value={formData[currentLanguage].title}
-              onChange={(e) => handleInputChange('title', e.target.value)}
-              placeholder="Enter page title"
-              className={`${errors.title ? 'border-error' : ''} ${
-                currentLanguage === 'ar' ? 'text-right' : ''
-              }`}
-              disabled={isSubmitting}
-              dir={currentLanguage === 'ar' ? 'rtl' : 'ltr'}
-            />
-            <div className="mt-1 flex items-center justify-between">
-              {errors.title && (
-                <div className="text-sm text-error flex items-center gap-1">
-                  <AlertCircle className="h-3 w-3" />
-                  {errors.title}
-                </div>
-              )}
+             <Input
+               id="title"
+               type="text"
+               value={formData[currentLanguage].title}
+               onChange={(e) => handleInputChange('title', e.target.value)}
+               placeholder="Enter page title"
+               className={`${errors.title ? 'border-error' : ''} ${
+                 currentLanguage === 'ar' ? 'text-right' : ''
+               }`}
+               disabled={isSubmitting}
+               dir={currentLanguage === 'ar' ? 'rtl' : 'ltr'}
+               aria-required="true"
+               aria-invalid={!!errors.title}
+               aria-describedby={errors.title ? 'title-error' : undefined}
+             />
+             <div className="mt-1 flex items-center justify-between">
+               {errors.title && (
+                 <div id="title-error" className="text-sm text-error flex items-center gap-1">
+                   <AlertCircle className="h-3 w-3" />
+                   {errors.title}
+                 </div>
+               )}
               <span className="text-xs text-muted-foreground ml-auto">
                 {formData[currentLanguage].title.length}/255
               </span>
@@ -517,44 +522,48 @@ export function PageFormClient({ mode, pageId, initialData }: PageFormClientProp
               Page Slug
               <span className="text-error ml-1">*</span>
             </Label>
-            <Input
-              id="slug"
-              type="text"
-              value={formData.slug}
-              onChange={(e) => handleInputChange('slug', e.target.value)}
-              placeholder="page-slug"
-              className={errors.slug ? 'border-error' : ''}
-              disabled={isSubmitting}
-            />
-            <p className="text-xs text-muted-foreground mt-1">
-              Used in the page URL. Auto-generated from title if left empty.
-            </p>
-            {errors.slug && (
-              <div className="text-sm text-error flex items-center gap-1 mt-1">
-                <AlertCircle className="h-3 w-3" />
-                {errors.slug}
-              </div>
-            )}
+             <Input
+               id="slug"
+               type="text"
+               value={formData.slug}
+               onChange={(e) => handleInputChange('slug', e.target.value)}
+               placeholder="page-slug"
+               className={errors.slug ? 'border-error' : ''}
+               disabled={isSubmitting}
+               aria-required="true"
+               aria-invalid={!!errors.slug}
+               aria-describedby={errors.slug ? 'slug-error slug-help' : 'slug-help'}
+             />
+             <p id="slug-help" className="text-xs text-muted-foreground mt-1">
+               Used in the page URL. Auto-generated from title if left empty.
+             </p>
+             {errors.slug && (
+               <div id="slug-error" className="text-sm text-error flex items-center gap-1 mt-1">
+                 <AlertCircle className="h-3 w-3" />
+                 {errors.slug}
+               </div>
+             )}
           </div>
 
           {/* Publish Status */}
           <div>
-            <div className="flex items-center gap-3">
-              <input
-                id="isPublished"
-                type="checkbox"
-                checked={formData.isPublished}
-                onChange={(e) => handleInputChange('isPublished', e.target.checked)}
-                disabled={isSubmitting}
-                className="w-4 h-4 rounded border-input bg-background"
-              />
-              <Label htmlFor="isPublished" className="text-sm font-medium cursor-pointer">
-                Publish this page
-              </Label>
-            </div>
-            <p className="text-xs text-muted-foreground mt-2 ml-7">
-              When unchecked, page will be saved as draft and not visible to the public.
-            </p>
+             <div className="flex items-center gap-3">
+               <input
+                 id="isPublished"
+                 type="checkbox"
+                 checked={formData.isPublished}
+                 onChange={(e) => handleInputChange('isPublished', e.target.checked)}
+                 disabled={isSubmitting}
+                 className="w-4 h-4 rounded border-input bg-background"
+                 aria-describedby="isPublished-help"
+               />
+               <Label htmlFor="isPublished" className="text-sm font-medium cursor-pointer">
+                 Publish this page
+               </Label>
+             </div>
+             <p id="isPublished-help" className="text-xs text-muted-foreground mt-2 ml-7">
+               When unchecked, page will be saved as draft and not visible to the public.
+             </p>
           </div>
         </div>
       </FormSection>
@@ -574,30 +583,32 @@ export function PageFormClient({ mode, pageId, initialData }: PageFormClientProp
             <Label htmlFor="metaTitle" className="text-sm font-medium">
               Meta Title (for search engines)
             </Label>
-            <Input
-              id="metaTitle"
-              type="text"
-              value={formData[currentLanguage].metaTitle}
-              onChange={(e) => handleInputChange('metaTitle', e.target.value)}
-              placeholder="Page title for search results"
-              className={`${errors.metaTitle ? 'border-error' : ''} ${
-                currentLanguage === 'ar' ? 'text-right' : ''
-              }`}
-              disabled={isSubmitting}
-              maxLength={60}
-              dir={currentLanguage === 'ar' ? 'rtl' : 'ltr'}
-            />
-            <div className="mt-1 flex items-center justify-between">
-              {errors.metaTitle && (
-                <div className="text-sm text-error flex items-center gap-1">
-                  <AlertCircle className="h-3 w-3" />
-                  {errors.metaTitle}
-                </div>
-              )}
-              <span className="text-xs text-muted-foreground ml-auto">
-                {formData[currentLanguage].metaTitle.length}/60
-              </span>
-            </div>
+             <Input
+               id="metaTitle"
+               type="text"
+               value={formData[currentLanguage].metaTitle}
+               onChange={(e) => handleInputChange('metaTitle', e.target.value)}
+               placeholder="Page title for search results"
+               className={`${errors.metaTitle ? 'border-error' : ''} ${
+                 currentLanguage === 'ar' ? 'text-right' : ''
+               }`}
+               disabled={isSubmitting}
+               maxLength={60}
+               dir={currentLanguage === 'ar' ? 'rtl' : 'ltr'}
+               aria-invalid={!!errors.metaTitle}
+               aria-describedby={errors.metaTitle ? 'metaTitle-error' : 'metaTitle-hint'}
+             />
+             <div className="mt-1 flex items-center justify-between">
+               {errors.metaTitle && (
+                 <div id="metaTitle-error" className="text-sm text-error flex items-center gap-1">
+                   <AlertCircle className="h-3 w-3" />
+                   {errors.metaTitle}
+                 </div>
+               )}
+               <span id="metaTitle-hint" className="text-xs text-muted-foreground ml-auto">
+                 {formData[currentLanguage].metaTitle.length}/60
+               </span>
+             </div>
           </div>
 
           {/* Meta Description */}
@@ -605,30 +616,32 @@ export function PageFormClient({ mode, pageId, initialData }: PageFormClientProp
             <Label htmlFor="metaDescription" className="text-sm font-medium">
               Meta Description (for search engines)
             </Label>
-            <Textarea
-              id="metaDescription"
-              value={formData[currentLanguage].metaDescription}
-              onChange={(e) => handleInputChange('metaDescription', e.target.value)}
-              placeholder="Page description for search results"
-              className={`${errors.metaDescription ? 'border-error' : ''} ${
-                currentLanguage === 'ar' ? 'text-right' : ''
-              }`}
-              disabled={isSubmitting}
-              rows={3}
-              maxLength={160}
-              dir={currentLanguage === 'ar' ? 'rtl' : 'ltr'}
-            />
-            <div className="mt-1 flex items-center justify-between">
-              {errors.metaDescription && (
-                <div className="text-sm text-error flex items-center gap-1">
-                  <AlertCircle className="h-3 w-3" />
-                  {errors.metaDescription}
-                </div>
-              )}
-              <span className="text-xs text-muted-foreground ml-auto">
-                {formData[currentLanguage].metaDescription.length}/160
-              </span>
-            </div>
+             <Textarea
+               id="metaDescription"
+               value={formData[currentLanguage].metaDescription}
+               onChange={(e) => handleInputChange('metaDescription', e.target.value)}
+               placeholder="Page description for search results"
+               className={`${errors.metaDescription ? 'border-error' : ''} ${
+                 currentLanguage === 'ar' ? 'text-right' : ''
+               }`}
+               disabled={isSubmitting}
+               rows={3}
+               maxLength={160}
+               dir={currentLanguage === 'ar' ? 'rtl' : 'ltr'}
+               aria-invalid={!!errors.metaDescription}
+               aria-describedby={errors.metaDescription ? 'metaDescription-error' : 'metaDescription-hint'}
+             />
+             <div className="mt-1 flex items-center justify-between">
+               {errors.metaDescription && (
+                 <div id="metaDescription-error" className="text-sm text-error flex items-center gap-1">
+                   <AlertCircle className="h-3 w-3" />
+                   {errors.metaDescription}
+                 </div>
+               )}
+               <span id="metaDescription-hint" className="text-xs text-muted-foreground ml-auto">
+                 {formData[currentLanguage].metaDescription.length}/160
+               </span>
+             </div>
           </div>
 
           <div className="bg-muted/50 rounded-lg p-4 text-sm text-muted-foreground">

@@ -130,16 +130,17 @@ export default function AdminLoginPage() {
                   <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
                     <Mail className="w-5 h-5 text-muted-foreground group-focus-within:text-primary transition-colors duration-200" />
                   </div>
-                  <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    autoComplete="email"
-                    required
-                    disabled={isPending}
-                    placeholder="admin@damira-pharma.com"
-                    className="block w-full pl-12 pr-4 py-3.5 text-foreground bg-slate-50/50 border border-slate-200 rounded-xl placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
-                  />
+                   <input
+                     id="email"
+                     name="email"
+                     type="email"
+                     autoComplete="email"
+                     required
+                     disabled={isPending}
+                     placeholder="admin@damira-pharma.com"
+                     className="block w-full pl-12 pr-4 py-3.5 text-foreground bg-slate-50/50 border border-slate-200 rounded-xl placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+                     aria-required="true"
+                   />
                 </div>
               </div>
 
@@ -155,16 +156,17 @@ export default function AdminLoginPage() {
                   <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
                     <Lock className="w-5 h-5 text-muted-foreground group-focus-within:text-primary transition-colors duration-200" />
                   </div>
-                  <input
-                    id="password"
-                    name="password"
-                    type={showPassword ? 'text' : 'password'}
-                    autoComplete="current-password"
-                    required
-                    disabled={isPending}
-                    placeholder="Enter your password"
-                    className="block w-full pl-12 pr-12 py-3.5 text-foreground bg-slate-50/50 border border-slate-200 rounded-xl placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
-                  />
+                   <input
+                     id="password"
+                     name="password"
+                     type={showPassword ? 'text' : 'password'}
+                     autoComplete="current-password"
+                     required
+                     disabled={isPending}
+                     placeholder="Enter your password"
+                     className="block w-full pl-12 pr-12 py-3.5 text-foreground bg-slate-50/50 border border-slate-200 rounded-xl placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+                     aria-required="true"
+                   />
                   <button
                     type="button"
                     onClick={() => setShowPassword(!showPassword)}

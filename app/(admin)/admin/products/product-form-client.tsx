@@ -552,20 +552,23 @@ export function ProductFormClient({ initialData, productId }: ProductFormClientP
                 <Label htmlFor="name">
                   Product Name <span className="text-destructive">*</span>
                 </Label>
-                <Input
-                  id="name"
-                  placeholder="Enter product name"
-                  error={!!errors.name}
-                  value={formData.name}
-                  onChange={(e) => handleInputChange('name', e.target.value)}
-                  maxLength={200}
-                />
-                {errors.name && (
-                  <p className="text-sm text-destructive flex items-center gap-1">
-                    <AlertCircle className="h-4 w-4" />
-                    {errors.name}
-                  </p>
-                )}
+                 <Input
+                   id="name"
+                   placeholder="Enter product name"
+                   error={!!errors.name}
+                   value={formData.name}
+                   onChange={(e) => handleInputChange('name', e.target.value)}
+                   maxLength={200}
+                   aria-required="true"
+                   aria-invalid={!!errors.name}
+                   aria-describedby={errors.name ? 'name-error' : undefined}
+                 />
+                 {errors.name && (
+                   <p id="name-error" className="text-sm text-destructive flex items-center gap-1">
+                     <AlertCircle className="h-4 w-4" />
+                     {errors.name}
+                   </p>
+                 )}
               </div>
 
               {/* Short Description */}
@@ -638,22 +641,25 @@ export function ProductFormClient({ initialData, productId }: ProductFormClientP
                   <Label htmlFor="type">
                     Product Type <span className="text-destructive">*</span>
                   </Label>
-                  <Select
-                    id="type"
-                    error={!!errors.type}
-                    value={formData.type}
-                    onChange={(e) => handleInputChange('type', e.target.value)}
-                    placeholder="Select product type"
-                  >
-                    <SelectOption value="SIMPLE">Simple</SelectOption>
-                    <SelectOption value="ADVANCED">Advanced</SelectOption>
-                  </Select>
-                  {errors.type && (
-                    <p className="text-sm text-destructive flex items-center gap-1">
-                      <AlertCircle className="h-4 w-4" />
-                      {errors.type}
-                    </p>
-                  )}
+                   <Select
+                     id="type"
+                     error={!!errors.type}
+                     value={formData.type}
+                     onChange={(e) => handleInputChange('type', e.target.value)}
+                     placeholder="Select product type"
+                     aria-required="true"
+                     aria-invalid={!!errors.type}
+                     aria-describedby={errors.type ? 'type-error' : undefined}
+                   >
+                     <SelectOption value="SIMPLE">Simple</SelectOption>
+                     <SelectOption value="ADVANCED">Advanced</SelectOption>
+                   </Select>
+                   {errors.type && (
+                     <p id="type-error" className="text-sm text-destructive flex items-center gap-1">
+                       <AlertCircle className="h-4 w-4" />
+                       {errors.type}
+                     </p>
+                   )}
                 </div>
 
                 {/* Status */}
@@ -661,22 +667,25 @@ export function ProductFormClient({ initialData, productId }: ProductFormClientP
                   <Label htmlFor="status">
                     Status <span className="text-destructive">*</span>
                   </Label>
-                  <Select
-                    id="status"
-                    error={!!errors.status}
-                    value={formData.status}
-                    onChange={(e) => handleInputChange('status', e.target.value)}
-                    placeholder="Select status"
-                  >
-                    <SelectOption value="AVAILABLE">Available</SelectOption>
-                    <SelectOption value="PIPELINE">Pipeline</SelectOption>
-                  </Select>
-                  {errors.status && (
-                    <p className="text-sm text-destructive flex items-center gap-1">
-                      <AlertCircle className="h-4 w-4" />
-                      {errors.status}
-                    </p>
-                  )}
+                   <Select
+                     id="status"
+                     error={!!errors.status}
+                     value={formData.status}
+                     onChange={(e) => handleInputChange('status', e.target.value)}
+                     placeholder="Select status"
+                     aria-required="true"
+                     aria-invalid={!!errors.status}
+                     aria-describedby={errors.status ? 'status-error' : undefined}
+                   >
+                     <SelectOption value="AVAILABLE">Available</SelectOption>
+                     <SelectOption value="PIPELINE">Pipeline</SelectOption>
+                   </Select>
+                   {errors.status && (
+                     <p id="status-error" className="text-sm text-destructive flex items-center gap-1">
+                       <AlertCircle className="h-4 w-4" />
+                       {errors.status}
+                     </p>
+                   )}
                 </div>
               </div>
 
@@ -686,26 +695,29 @@ export function ProductFormClient({ initialData, productId }: ProductFormClientP
                   <Label htmlFor="categoryId">
                     Category <span className="text-destructive">*</span>
                   </Label>
-                  <Select
-                    id="categoryId"
-                    error={!!errors.categoryId}
-                    value={formData.categoryId}
-                    onChange={(e) => handleInputChange('categoryId', e.target.value)}
-                    disabled={lookupLoading}
-                    placeholder={lookupLoading ? 'Loading...' : 'Select category'}
-                  >
-                    {categories.map((cat) => (
-                      <SelectOption key={cat.id} value={cat.id}>
-                        {cat.name}
-                      </SelectOption>
-                    ))}
-                  </Select>
-                  {errors.categoryId && (
-                    <p className="text-sm text-destructive flex items-center gap-1">
-                      <AlertCircle className="h-4 w-4" />
-                      {errors.categoryId}
-                    </p>
-                  )}
+                   <Select
+                     id="categoryId"
+                     error={!!errors.categoryId}
+                     value={formData.categoryId}
+                     onChange={(e) => handleInputChange('categoryId', e.target.value)}
+                     disabled={lookupLoading}
+                     placeholder={lookupLoading ? 'Loading...' : 'Select category'}
+                     aria-required="true"
+                     aria-invalid={!!errors.categoryId}
+                     aria-describedby={errors.categoryId ? 'categoryId-error' : undefined}
+                   >
+                     {categories.map((cat) => (
+                       <SelectOption key={cat.id} value={cat.id}>
+                         {cat.name}
+                       </SelectOption>
+                     ))}
+                   </Select>
+                   {errors.categoryId && (
+                     <p id="categoryId-error" className="text-sm text-destructive flex items-center gap-1">
+                       <AlertCircle className="h-4 w-4" />
+                       {errors.categoryId}
+                     </p>
+                   )}
                 </div>
 
                 {/* Therapeutic Area */}
@@ -740,27 +752,30 @@ export function ProductFormClient({ initialData, productId }: ProductFormClientP
                 <Label htmlFor="manufacturerId">
                   Manufacturer <span className="text-destructive">*</span>
                 </Label>
-                <Select
-                  id="manufacturerId"
-                  error={!!errors.manufacturerId}
-                  value={formData.manufacturerId}
-                  onChange={(e) => handleInputChange('manufacturerId', e.target.value)}
-                  disabled={lookupLoading}
-                  placeholder={lookupLoading ? 'Loading...' : 'Select manufacturer'}
-                >
-                  {manufacturers.map((mfg) => (
-                    <SelectOption key={mfg.id} value={mfg.id}>
-                      {mfg.name}
-                      {mfg.country && ` (${mfg.country})`}
-                    </SelectOption>
-                  ))}
-                </Select>
-                {errors.manufacturerId && (
-                  <p className="text-sm text-destructive flex items-center gap-1">
-                    <AlertCircle className="h-4 w-4" />
-                    {errors.manufacturerId}
-                  </p>
-                )}
+                 <Select
+                   id="manufacturerId"
+                   error={!!errors.manufacturerId}
+                   value={formData.manufacturerId}
+                   onChange={(e) => handleInputChange('manufacturerId', e.target.value)}
+                   disabled={lookupLoading}
+                   placeholder={lookupLoading ? 'Loading...' : 'Select manufacturer'}
+                   aria-required="true"
+                   aria-invalid={!!errors.manufacturerId}
+                   aria-describedby={errors.manufacturerId ? 'manufacturerId-error' : undefined}
+                 >
+                   {manufacturers.map((mfg) => (
+                     <SelectOption key={mfg.id} value={mfg.id}>
+                       {mfg.name}
+                       {mfg.country && ` (${mfg.country})`}
+                     </SelectOption>
+                   ))}
+                 </Select>
+                 {errors.manufacturerId && (
+                   <p id="manufacturerId-error" className="text-sm text-destructive flex items-center gap-1">
+                     <AlertCircle className="h-4 w-4" />
+                     {errors.manufacturerId}
+                   </p>
+                 )}
               </div>
             </div>
           </FormSection>
@@ -789,12 +804,13 @@ export function ProductFormClient({ initialData, productId }: ProductFormClientP
                       className="object-cover"
                     />
                     <button
-                      type="button"
-                      onClick={handleRemoveCoverImage}
-                      className="absolute top-2 right-2 bg-red-500 text-white rounded-full p-1 hover:bg-red-600 transition-colors"
-                    >
-                      <X className="h-4 w-4" />
-                    </button>
+                       type="button"
+                       onClick={handleRemoveCoverImage}
+                       className="absolute top-2 right-2 bg-red-500 text-white rounded-full p-1 hover:bg-red-600 transition-colors"
+                       aria-label="Remove cover image"
+                     >
+                       <X className="h-4 w-4" />
+                     </button>
                   </div>
                 ) : (
                   <div className="border-2 border-dashed border-border rounded-lg p-6 text-center">
@@ -827,13 +843,14 @@ export function ProductFormClient({ initialData, productId }: ProductFormClientP
                             {formatFileSize(attachment.size)}
                           </span>
                         </div>
-                        <button
-                          type="button"
-                          onClick={() => handleRemoveAttachment(attachment.id)}
-                          className="text-destructive hover:text-destructive/80 transition-colors"
-                        >
-                          <X className="h-4 w-4" />
-                        </button>
+                         <button
+                           type="button"
+                           onClick={() => handleRemoveAttachment(attachment.id)}
+                           className="text-destructive hover:text-destructive/80 transition-colors"
+                           aria-label={`Remove ${attachment.name}`}
+                         >
+                           <X className="h-4 w-4" />
+                         </button>
                       </div>
                     ))}
                   </div>
@@ -1113,15 +1130,17 @@ function FormSection({
         type="button"
         onClick={onToggle}
         className="w-full bg-muted/50 hover:bg-muted px-4 py-3 flex items-center justify-between transition-colors"
+        aria-expanded={expanded}
+        aria-label={`${expanded ? 'Collapse' : 'Expand'} ${title} section`}
       >
         <div className="flex items-center gap-3">
           <div className="text-muted-foreground">{icon}</div>
           <h2 className="font-semibold">{title}</h2>
         </div>
         {expanded ? (
-          <ChevronUp className="h-5 w-5 text-muted-foreground" />
+          <ChevronUp className="h-5 w-5 text-muted-foreground" aria-hidden="true" />
         ) : (
-          <ChevronDown className="h-5 w-5 text-muted-foreground" />
+          <ChevronDown className="h-5 w-5 text-muted-foreground" aria-hidden="true" />
         )}
       </button>
       {expanded && <div className="p-4">{children}</div>}
