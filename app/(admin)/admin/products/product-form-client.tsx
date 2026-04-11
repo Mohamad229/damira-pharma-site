@@ -549,20 +549,21 @@ export function ProductFormClient({ initialData, productId }: ProductFormClientP
             <div className="space-y-4">
               {/* Product Name */}
               <div className="space-y-2">
-                <Label htmlFor="name">
-                  Product Name <span className="text-destructive">*</span>
-                </Label>
-                 <Input
-                   id="name"
-                   placeholder="Enter product name"
-                   error={!!errors.name}
-                   value={formData.name}
-                   onChange={(e) => handleInputChange('name', e.target.value)}
-                   maxLength={200}
-                   aria-required="true"
-                   aria-invalid={!!errors.name}
-                   aria-describedby={errors.name ? 'name-error' : undefined}
-                 />
+                 <Label htmlFor="name">
+                   Product Name <span className="text-destructive">*</span>
+                 </Label>
+                  <Input
+                    id="name"
+                    placeholder="Enter product name"
+                    error={!!errors.name}
+                    value={formData.name}
+                    onChange={(e) => handleInputChange('name', e.target.value)}
+                    maxLength={200}
+                    autoComplete="off"
+                    aria-required="true"
+                    aria-invalid={!!errors.name}
+                    aria-describedby={errors.name ? 'name-error' : undefined}
+                  />
                  {errors.name && (
                    <p id="name-error" className="text-sm text-destructive flex items-center gap-1">
                      <AlertCircle className="h-4 w-4" />

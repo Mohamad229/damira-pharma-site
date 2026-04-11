@@ -1,29 +1,44 @@
 'use client';
 
-import { useActionState, useState } from 'react';
+import { useState, useTransition, type FormEvent } from 'react';
 import { useRouter } from 'next/navigation';
-import { useEffect } from 'react';
+import { signIn } from 'next-auth/react';
 
 import { Eye, EyeOff, Loader2, Shield, Lock, Mail } from 'lucide-react';
-
-import { login } from '@/lib/actions/auth';
-
-import type { LoginState } from '@/lib/actions/auth';
 
 export default function AdminLoginPage() {
   const router = useRouter();
   const [showPassword, setShowPassword] = useState(false);
-  const [state, formAction, isPending] = useActionState<LoginState, FormData>(
-    login,
-    { error: undefined }
-  );
+  const [error, setError] = useState<string | undefined>(undefined);
+  const [isPending, startTransition] = useTransition();
 
-  // Redirect on successful login
-  useEffect(() => {
-    if (state.success) {
-      router.push('/admin');
-    }
-  }, [state.success, router]);
+  const callbackUrl = '/admin';
+
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setError(undefined);
+
+    const formData = new FormData(event.currentTarget);
+    const email = String(formData.get('email') || '');
+    const password = String(formData.get('password') || '');
+
+    startTransition(async () => {
+      const result = await signIn('credentials', {
+        email,
+        password,
+        redirect: false,
+        callbackUrl,
+      });
+
+      if (result?.error) {
+        setError('Invalid email or password');
+        return;
+      }
+
+      router.push(result?.url || callbackUrl);
+      router.refresh();
+    });
+  };
 
   return (
     <div className="w-full max-w-md animate-in fade-in slide-in-from-bottom-4 duration-700">
@@ -96,7 +111,7 @@ export default function AdminLoginPage() {
             </div>
 
             {/* Error message */}
-            {state.error && (
+            {error && (
               <div className="mb-6 p-4 rounded-xl bg-red-50 border border-red-100 animate-in fade-in slide-in-from-top-2 duration-300">
                 <div className="flex items-start gap-3">
                   <div className="flex-shrink-0 w-5 h-5 rounded-full bg-red-100 flex items-center justify-center mt-0.5">
@@ -109,7 +124,7 @@ export default function AdminLoginPage() {
                       Authentication failed
                     </p>
                     <p className="text-sm text-red-600 mt-0.5">
-                      {state.error}
+                      {error}
                     </p>
                   </div>
                 </div>
@@ -117,7 +132,7 @@ export default function AdminLoginPage() {
             )}
 
             {/* Form */}
-            <form action={formAction} className="space-y-5">
+            <form onSubmit={handleSubmit} className="space-y-5">
               {/* Email Field */}
               <div className="space-y-2">
                 <label

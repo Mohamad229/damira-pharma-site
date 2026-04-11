@@ -149,7 +149,7 @@ export function PagesTableClient({ initialData }: PagesTableClientProps) {
 
       if (result.data) {
         // Sort the data
-        let sorted = [...result.data.pages];
+        const sorted = [...result.data.pages];
 
         if (newSorting[0]?.id === 'title') {
           sorted.sort((a, b) => {
@@ -411,19 +411,21 @@ export function PagesTableClient({ initialData }: PagesTableClientProps) {
 
   return (
     <div className="space-y-4">
-      {/* Search Bar */}
-      <div className="p-4 border-b">
-        <div className="relative">
-          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-          <Input
-            placeholder="Search by title or slug..."
-            value={globalFilter}
-            onChange={(e) => setGlobalFilter(e.target.value)}
-            className="pl-10"
-            disabled={isPending}
-          />
-        </div>
-      </div>
+       {/* Search Bar */}
+       <div className="p-4 border-b">
+         <div className="relative">
+           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+           <Input
+             id="page-search"
+             name="page-search"
+             placeholder="Search by title or slug..."
+             value={globalFilter}
+             onChange={(e) => setGlobalFilter(e.target.value)}
+             className="pl-10"
+             disabled={isPending}
+           />
+         </div>
+       </div>
 
       {/* Table */}
       <div className="overflow-x-auto">

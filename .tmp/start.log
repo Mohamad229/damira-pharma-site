@@ -1,0 +1,52 @@
+
+> damira-pharma-site@0.1.0 start
+> next start --port 3100
+
+▲ Next.js 16.2.2
+- Local:         http://localhost:3100
+- Network:       http://10.2.0.2:3100
+✓ Ready in 420ms
+⨯ Error [PrismaClientConstructorValidationError]: Using engine type "client" requires either "adapter" or "accelerateUrl" to be provided to PrismaClient constructor.
+Read more at https://pris.ly/d/client-constructor
+    at module evaluation (C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\.next\server\chunks\ssr\[root-of-the-server]__0vtjtob._.js:1:258)
+    at instantiateModule (C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\.next\server\chunks\ssr\[turbopack]_runtime.js:853:9)
+    at getOrInstantiateModuleFromParent (C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\.next\server\chunks\ssr\[turbopack]_runtime.js:877:12)
+    at Context.esmImport [as i] (C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\.next\server\chunks\ssr\[turbopack]_runtime.js:281:20)
+    at module evaluation (C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\.next\server\chunks\ssr\[root-of-the-server]__06f0xu4._.js:1:6383)
+    at instantiateModule (C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\.next\server\chunks\ssr\[turbopack]_runtime.js:853:9)
+    at getOrInstantiateModuleFromParent (C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\.next\server\chunks\ssr\[turbopack]_runtime.js:877:12) {
+  digest: '2656946738'
+}
+⨯ Error [PrismaClientConstructorValidationError]: Using engine type "client" requires either "adapter" or "accelerateUrl" to be provided to PrismaClient constructor.
+Read more at https://pris.ly/d/client-constructor
+    at module evaluation (C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\.next\server\chunks\ssr\[root-of-the-server]__0vtjtob._.js:1:258)
+    at instantiateModule (C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\.next\server\chunks\ssr\[turbopack]_runtime.js:853:9)
+    at getOrInstantiateModuleFromParent (C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\.next\server\chunks\ssr\[turbopack]_runtime.js:877:12)
+    at Context.esmImport [as i] (C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\.next\server\chunks\ssr\[turbopack]_runtime.js:281:20)
+    at module evaluation (C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\.next\server\chunks\ssr\[root-of-the-server]__06f0xu4._.js:1:6383)
+    at instantiateModule (C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\.next\server\chunks\ssr\[turbopack]_runtime.js:853:9)
+    at getOrInstantiateModuleFromParent (C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\.next\server\chunks\ssr\[turbopack]_runtime.js:877:12) {
+  digest: '2656946738'
+}
+⨯ Error [PrismaClientConstructorValidationError]: Using engine type "client" requires either "adapter" or "accelerateUrl" to be provided to PrismaClient constructor.
+Read more at https://pris.ly/d/client-constructor
+    at module evaluation (C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\.next\server\chunks\ssr\[root-of-the-server]__0vtjtob._.js:1:258)
+    at instantiateModule (C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\.next\server\chunks\ssr\[turbopack]_runtime.js:853:9)
+    at getOrInstantiateModuleFromParent (C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\.next\server\chunks\ssr\[turbopack]_runtime.js:877:12)
+    at Context.esmImport [as i] (C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\.next\server\chunks\ssr\[turbopack]_runtime.js:281:20)
+    at module evaluation (C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\.next\server\chunks\ssr\[root-of-the-server]__06f0xu4._.js:1:6383)
+    at instantiateModule (C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\.next\server\chunks\ssr\[turbopack]_runtime.js:853:9)
+    at getOrInstantiateModuleFromParent (C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\.next\server\chunks\ssr\[turbopack]_runtime.js:877:12) {
+  digest: '2656946738'
+}
+⨯ Error [PrismaClientConstructorValidationError]: Using engine type "client" requires either "adapter" or "accelerateUrl" to be provided to PrismaClient constructor.
+Read more at https://pris.ly/d/client-constructor
+    at module evaluation (C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\.next\server\chunks\ssr\[root-of-the-server]__0vtjtob._.js:1:258)
+    at instantiateModule (C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\.next\server\chunks\ssr\[turbopack]_runtime.js:853:9)
+    at getOrInstantiateModuleFromParent (C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\.next\server\chunks\ssr\[turbopack]_runtime.js:877:12)
+    at Context.esmImport [as i] (C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\.next\server\chunks\ssr\[turbopack]_runtime.js:281:20)
+    at module evaluation (C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\.next\server\chunks\ssr\[root-of-the-server]__06f0xu4._.js:1:6383)
+    at instantiateModule (C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\.next\server\chunks\ssr\[turbopack]_runtime.js:853:9)
+    at getOrInstantiateModuleFromParent (C:\Users\Mohamad\Documents\Visual Studio Code\DamiraWebsite2\damira-pharma-site\.next\server\chunks\ssr\[turbopack]_runtime.js:877:12) {
+  digest: '2656946738'
+}

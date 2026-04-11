@@ -381,25 +381,27 @@ function SearchFilterBar({
 }) {
   return (
     <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-      {/* Search Input */}
-      <div className="flex-1 max-w-md">
-        <Input
-          placeholder="Search by name..."
-          value={searchQuery}
-          onChange={(e) => onSearchChange(e.target.value)}
-          prefixIcon={<Search className="size-4" />}
-          suffixIcon={
-            searchQuery && (
-              <button
-                onClick={() => onSearchChange('')}
-                className="text-muted-foreground hover:text-foreground"
-              >
-                <X className="size-4" />
-              </button>
-            )
-          }
-        />
-      </div>
+       {/* Search Input */}
+       <div className="flex-1 max-w-md">
+         <Input
+           id="media-search"
+           name="media-search"
+           placeholder="Search by name..."
+           value={searchQuery}
+           onChange={(e) => onSearchChange(e.target.value)}
+           prefixIcon={<Search className="size-4" />}
+           suffixIcon={
+             searchQuery && (
+               <button
+                 onClick={() => onSearchChange('')}
+                 className="text-muted-foreground hover:text-foreground"
+               >
+                 <X className="size-4" />
+               </button>
+             )
+           }
+         />
+       </div>
 
       {/* Type Filter */}
       <div className="flex items-center gap-3">

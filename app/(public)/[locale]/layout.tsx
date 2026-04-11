@@ -1,8 +1,11 @@
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
+
+import { SiteFooter } from '@/components/public/site-footer';
+import { SiteHeader } from '@/components/public/site-header';
 import { locales, localeDirection, type Locale } from '@/i18n/config';
-import { fontVariables } from '@/lib/fonts';
+import { getAbsoluteUrl } from '@/lib/seo';
 
 type Props = {
   children: React.ReactNode;
@@ -15,7 +18,7 @@ export function generateStaticParams() {
 
 export default async function PublicLayout({ children, params }: Props) {
   const { locale } = await params;
-  
+
   // Validate locale
   if (!locales.includes(locale as Locale)) {
     notFound();
@@ -27,24 +30,42 @@ export default async function PublicLayout({ children, params }: Props) {
   // Get messages for the locale
   const messages = await getMessages();
   const direction = localeDirection[locale as Locale];
+  const currentLocale = locale as Locale;
+
+  const organizationSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Damira Pharma',
+    url: getAbsoluteUrl(currentLocale === 'ar' ? '/ar' : '/'),
+    logo: getAbsoluteUrl('/favicon.ico'),
+    description:
+      currentLocale === 'ar'
+        ? 'شركة داميرا فارما تقدم حلول دوائية موثوقة في مصر والمنطقة.'
+        : 'Damira Pharma delivers trusted pharmaceutical solutions across Egypt and the MENA region.',
+    contactPoint: [
+      {
+        '@type': 'ContactPoint',
+        contactType: 'customer support',
+        email: 'info@damirapharma.com',
+        telephone: '+20-2-2390-2200',
+        areaServed: 'MENA',
+      },
+    ],
+  };
 
   return (
-    <html lang={locale} dir={direction} className={`${fontVariables} h-full antialiased`}>
-      <body className="min-h-full flex flex-col">
-        <NextIntlClientProvider messages={messages}>
-          <div className="min-h-screen flex flex-col">
-            <header className="border-b">
-              {/* Header placeholder */}
-            </header>
-            <main className="flex-1">
-              {children}
-            </main>
-            <footer className="border-t">
-              {/* Footer placeholder */}
-            </footer>
-          </div>
-        </NextIntlClientProvider>
-      </body>
-    </html>
+    <NextIntlClientProvider messages={messages}>
+      <div lang={locale} dir={direction} className="min-h-screen bg-background text-foreground">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema),
+          }}
+        />
+        <SiteHeader />
+        <main className="flex-1">{children}</main>
+        <SiteFooter />
+      </div>
+    </NextIntlClientProvider>
   );
 }

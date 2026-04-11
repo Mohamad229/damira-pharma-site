@@ -5,7 +5,7 @@ import bcrypt from 'bcryptjs';
 import { revalidatePath } from 'next/cache';
 
 import db from '@/lib/db';
-import { requireRole } from '@/lib/auth-utils';
+import { requireAuth, requireRole } from '@/lib/auth-utils';
 import { UserRole } from '@prisma/client';
 
 // Constants
@@ -29,6 +29,16 @@ const updateUserSchema = z.object({
     .or(z.literal('')),
   name: z.string().min(2, 'Name must be at least 2 characters'),
   role: z.enum(['ADMIN', 'INTERNAL_USER']),
+});
+
+const updateCurrentUserSchema = z.object({
+  email: z.email('Invalid email address'),
+  password: z
+    .string()
+    .min(8, 'Password must be at least 8 characters')
+    .optional()
+    .or(z.literal('')),
+  name: z.string().min(2, 'Name must be at least 2 characters'),
 });
 
 // Types
@@ -383,5 +393,116 @@ export async function deleteUser(id: string): Promise<ActionState> {
     }
     console.error('Error deleting user:', error);
     return { error: 'Failed to delete user' };
+  }
+}
+
+/**
+ * Get current authenticated user profile
+ */
+export async function getCurrentUserProfile(
+): Promise<ActionState & { data?: UserWithoutPassword }> {
+  try {
+    const sessionUser = await requireAuth();
+
+    const user = await db.user.findUnique({
+      where: { id: sessionUser.id },
+      select: {
+        id: true,
+        email: true,
+        name: true,
+        role: true,
+        createdAt: true,
+        updatedAt: true,
+      },
+    });
+
+    if (!user) {
+      return { error: 'User not found' };
+    }
+
+    return {
+      success: true,
+      data: user,
+    };
+  } catch (error) {
+    if (error instanceof Error && error.message.includes('NEXT_REDIRECT')) {
+      throw error;
+    }
+    console.error('Error fetching current user profile:', error);
+    return { error: 'Failed to fetch profile' };
+  }
+}
+
+/**
+ * Update current authenticated user profile
+ */
+export async function updateCurrentUserProfile(
+  formData: FormData
+): Promise<ActionState> {
+  try {
+    const sessionUser = await requireAuth();
+
+    const rawData = {
+      email: formData.get('email') as string,
+      password: formData.get('password') as string,
+      name: formData.get('name') as string,
+    };
+
+    const validatedFields = updateCurrentUserSchema.safeParse(rawData);
+
+    if (!validatedFields.success) {
+      const errors = validatedFields.error.flatten().fieldErrors;
+      const errorMessage =
+        errors.email?.[0] ||
+        errors.password?.[0] ||
+        errors.name?.[0] ||
+        'Invalid input';
+      return { error: errorMessage };
+    }
+
+    const { email, password, name } = validatedFields.data;
+
+    const emailInUse = await db.user.findFirst({
+      where: {
+        email,
+        NOT: { id: sessionUser.id },
+      },
+    });
+
+    if (emailInUse) {
+      return { error: 'A user with this email already exists' };
+    }
+
+    const updateData: {
+      email: string;
+      name: string;
+      password?: string;
+    } = {
+      email,
+      name,
+    };
+
+    if (password && password.length > 0) {
+      updateData.password = await bcrypt.hash(password, SALT_ROUNDS);
+    }
+
+    const updatedUser = await db.user.update({
+      where: { id: sessionUser.id },
+      data: updateData,
+    });
+
+    revalidatePath(ADMIN_USERS_PATH);
+    revalidatePath(`${ADMIN_USERS_PATH}/profile`);
+
+    return {
+      success: true,
+      data: excludePassword(updatedUser),
+    };
+  } catch (error) {
+    if (error instanceof Error && error.message.includes('NEXT_REDIRECT')) {
+      throw error;
+    }
+    console.error('Error updating current user profile:', error);
+    return { error: 'Failed to update profile' };
   }
 }

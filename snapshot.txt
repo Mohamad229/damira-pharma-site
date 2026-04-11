@@ -1,0 +1,7 @@
+uid=1_0 RootWebArea "Damira Pharma" url="http://localhost:3000/admin"
+  uid=1_1 complementary
+  uid=1_2 main
+    uid=1_3 heading "Admin Dashboard" level="1"
+    uid=1_4 StaticText "Coming soon..."
+  uid=1_5 alert atomic live="assertive" relevant="additions text"
+  uid=1_6 generic "Notifications"
